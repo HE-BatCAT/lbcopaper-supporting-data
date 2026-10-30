@@ -1,0 +1,86 @@
+{ "@id":"CEL-26-399",
+  "@type":"https://w3id.org/batcat#full_cell",
+  "assembly":
+  [
+    {
+        "https://w3id.org/batcat#forming": "P242",
+        "https://w3id.org/batcat#assemblying": "P9259",
+        "https://w3id.org/batcat#negative_electrode": {
+            "code": "P9261",
+            "@value": "ELO-26-195"
+        },
+        "https://w3id.org/batcat#positive_electrode": {
+            "code": "P9262",
+            "@value": "ELO-26-193"
+        },
+        "https://w3id.org/batcat#separator": {
+            "code": "P9264",
+            "@value": "AGT-25-1312"
+        },
+        "https://w3id.org/batcat#electrolyte": {
+            "code": "P9263",
+            "@value": "PRC-25-321"
+        }
+    },
+    {
+        "https://w3id.org/batcat#forming": "P242",
+        "https://w3id.org/batcat#assemblying": "P9259",
+        "https://w3id.org/batcat#negative_electrode": {
+            "code": "P9261",
+            "@value": "ELO-26-195"
+        },
+        "https://w3id.org/batcat#positive_electrode": {
+            "code": "P9262",
+            "@value": "ELO-26-194"
+        },
+        "https://w3id.org/batcat#separator": {
+            "code": "P9264",
+            "@value": "AGT-25-1312"
+        },
+        "https://w3id.org/batcat#electrolyte": {
+            "code": "P9263",
+            "@value": "PRC-25-321"
+        }
+    },
+    {
+        "https://w3id.org/batcat#forming": "P242",
+        "https://w3id.org/batcat#assemblying": "P9259",
+        "https://w3id.org/batcat#negative_electrode": {
+            "code": "P9261",
+            "@value": "ELO-26-199"
+        },
+        "https://w3id.org/batcat#positive_electrode": {
+            "code": "P9262",
+            "@value": "ELO-26-197"
+        },
+        "https://w3id.org/batcat#separator": {
+            "code": "P9264",
+            "@value": "AGT-25-1312"
+        },
+        "https://w3id.org/batcat#electrolyte": {
+            "code": "P9263",
+            "@value": "PRC-25-321"
+        }
+    },
+    {
+        "https://w3id.org/batcat#forming": "P242",
+        "https://w3id.org/batcat#assemblying": "P9259",
+        "https://w3id.org/batcat#negative_electrode": {
+            "code": "P9261",
+            "@value": "ELO-26-200"
+        },
+        "https://w3id.org/batcat#positive_electrode": {
+            "code": "P9262",
+            "@value": "ELO-26-198"
+        },
+        "https://w3id.org/batcat#separator": {
+            "code": "P9264",
+            "@value": "AGT-25-1312"
+        },
+        "https://w3id.org/batcat#electrolyte": {
+            "code": "P9263",
+            "@value": "PRC-25-321"
+        }
+    }
+]
+}
