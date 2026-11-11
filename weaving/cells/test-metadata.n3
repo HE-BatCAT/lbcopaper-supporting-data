@@ -1,0 +1,74 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dqv: <http://www.w3.org/ns/dqv#> .
+@prefix ex: <https://w3id.org/batcat/scenarios/lib_cell_example#> .
+@prefix lbco: <https://w3id.org/batcat#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sdmxa: <http://purl.org/linked-data/sdmx/2009/attribute#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xs: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://issemantic.net/surface_area> a dqv:Metric ;
+    skos:definition "Spatial resolution of a dataset expressed as distance" ;
+    dqv:expectedDataType "xsd:decimal" ;
+    dqv:inDimension "dqv:precision" .
+
+ex:IFPEN_LIB_PRF_26_414 a lbco:characterization_process ;
+    lbco:has_participant [ a lbco:human_agent ],
+        ex:IFPEN_LIB_CEL_26_399 .
+
+ex:IPFEN_PRP_26_1509 a lbco:assemblying ;
+    lbco:has_input ex:IFPEN_LIB_AGT_25_1312,
+        ex:IFPEN_LIB_ELO_26_193,
+        ex:IFPEN_LIB_ELO_26_195,
+        ex:IFPEN_LIB_PRC_25_321 ;
+    lbco:has_output ex:IFPEN_LIB_CEL_26_399 ;
+    lbco:has_setting [ a lbco:number_of_spacers ;
+            rdfs:comment "3 units (another way to express it, with a blank node)" ],
+        ex:SETTING_1,
+        ex:SETTING_2 .
+
+<https://w3id.org/batcat/scenarios/optimization_example> dcterms:contributor "Daniele Toti (ORCID 0000-0002-9668-6961)",
+        "Gerhard Goldbeck (ORCID 0000-0002-4181-2852)",
+        "Martin T. Horsch (ORCID 0000-0002-9464-6739)" ;
+    dcterms:creator "Martin Petit (ORCID 0000-0002-4226-6689)",
+        "Noel Vizcaino (ORCID 0000-0001-7608-9484)",
+        "Silvia Chiacchiera (ORCID 0000-0003-0422-7870)" ;
+    dcterms:license "https://www.gnu.org/licenses/lgpl-3.0.en.html" ;
+    dcterms:modified "2026-11-04" ;
+    dcterms:title "BatCAT core ontologies: LIB cell example" ;
+    rdfs:comment """The authors acknowledge funding from the European Union's Horizon Europe research and
+innovation programme under grant agreement no. 101137725, Battery Cell Assembly Twin (BatCAT).""";
+    owl:imports <https://w3id.org/batcat/battery>,
+        <https://w3id.org/batcat/characterization>,
+        <https://w3id.org/batcat/higher>,
+        <https://w3id.org/batcat/manufacturing> ;
+    owl:versionInfo "version 0.1.0" .
+
+ex:IFPEN_LIB_AGT_25_1312 a lbco:separator .
+
+ex:IFPEN_LIB_ELO_26_193 a lbco:positive_electrode ;
+    lbco:has_property ex:PROPERTY_1,
+        ex:PROPERTY_2 .
+
+ex:IFPEN_LIB_ELO_26_195 a lbco:negative_electrode .
+
+ex:IFPEN_LIB_PRC_25_321 a lbco:electrolyte .
+
+ex:PROPERTY_1 a lbco:electrode_porosity ;
+    rdfs:comment "Value and unit: 40 %" .
+
+ex:PROPERTY_2 a lbco:electrode_surface_area ;
+    rdfs:comment "Value and unit: 1.131 cm^2" ;
+    dqv:hasQualityMeasurement [ a dqv:QualityMeasurement ;
+            sdmxa:unitMeasure <http://qudt.org/vocab/unit/CentiM2> ;
+            dqv:isMeasurementOf "surface_area" ;
+            dqv:value 1.131e+00 ] .
+
+ex:SETTING_1 a lbco:number_of_spacers ;
+    rdfs:comment "Value and unit: 3 units" .
+
+ex:SETTING_2 a lbco:electrolyte_volume ;
+    rdfs:comment "Value and unit: 100 microliters" .
+
+ex:IFPEN_LIB_CEL_26_399 a lbco:full_cell .

@@ -1,0 +1,207 @@
+{
+      "@context":{
+                  "@version":1.1,  
+                  "ex": "https://w3id.org/batcat/scenarios/lib_cell_example#",
+                  "lbco": "https://w3id.org/batcat#",
+                  "dc":"http://purl.org/dc/elements/1.1/",
+                  "dcterms": "http://purl.org/dc/terms/",  
+                  "mod":"https://w3id.org/mod#",
+                  "owl":"http://www.w3.org/2002/07/owl#",
+                  "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",  
+                  "rdfs":"http://www.w3.org/2000/01/rdf-schema#",
+                  "skos":"http://www.w3.org/2004/02/skos/core#",
+                  "xs":"http://www.w3.org/2001/XMLSchema#",
+                  "dqv" : "http://www.w3.org/ns/dqv#",
+                  "hasQualityMeasurement": "dqv:hasQualityMeasurement",
+                  "QualityMeasurement": "dqv:QualityMeasurement",
+                  "value": "dqv:value",
+                  "isMeasurementOf": "dqv:isMeasurementOf",
+                  "Metric": "dqv:Metric",
+                  "inDimension": "dqv:inDimension",
+                  "precision": "dqv:precision",
+                  "expectedDataType": "dqv:expectedDataType",
+                  "unitMeasure": {
+		                  "@id": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure",
+		                  "@type": "@id"
+		                }
+                 },
+
+ "@graph": [
+   { 
+   "@id":"https://w3id.org/batcat/scenarios/optimization_example",
+   "owl:versionInfo": "version 0.1.0",
+  "dcterms:contributor": [
+        "Daniele Toti (ORCID 0000-0002-9668-6961)",
+        "Gerhard Goldbeck (ORCID 0000-0002-4181-2852)",
+        "Martin T. Horsch (ORCID 0000-0002-9464-6739)"
+      ],
+     "dcterms:creator": [
+        "Martin Petit (ORCID 0000-0002-4226-6689)",
+        "Noel Vizcaino (ORCID 0000-0001-7608-9484)",
+        "Silvia Chiacchiera (ORCID 0000-0003-0422-7870)"
+      ],
+      "dcterms:license":"https://www.gnu.org/licenses/lgpl-3.0.en.html",
+      "http://purl.org/dc/terms/modified": "2026-11-04",
+      "http://purl.org/dc/terms/title": "BatCAT core ontologies: LIB cell example",
+      "rdfs:comment": "The authors acknowledge funding from the European Union's Horizon Europe research and\ninnovation programme under grant agreement no. 101137725, Battery Cell Assembly Twin (BatCAT).",
+      "owl:imports": [
+        {
+          "@id": "https://w3id.org/batcat/higher"
+        },
+        {
+          "@id": "https://w3id.org/batcat/characterization"
+        },
+        {
+          "@id": "https://w3id.org/batcat/manufacturing"
+        },
+        {
+          "@id": "https://w3id.org/batcat/battery"
+        }
+      ]
+      
+  },
+     { 
+     "@id":"surface_area",
+     "@type":"dqv:Metric",
+     "skos:definition": "Spatial resolution of a dataset expressed as distance",
+     "dqv:expectedDataType": "xsd:decimal",
+     "dqv:inDimension" : "dqv:precision" 
+    },
+      {
+      "@id": "ex:IFPEN_LIB_AGT_25_1312",
+      "@type": "lbco:separator"
+    },
+    {
+      "@id": "ex:IFPEN_LIB_CEL_26_399",
+      "@type": "lbco:full_cell"
+    },
+    {
+      "@id": "ex:IFPEN_LIB_ELO_26_193",
+      "@type": "lbco:positive_electrode",
+      "lbco:has_property": [
+        {
+          "@id": "ex:PROPERTY_1",
+          "@type": "lbco:electrode_porosity",
+          "rdfs:comment": "Value and unit: 40 %"
+        },
+        {
+          "@id": "ex:PROPERTY_2",
+          "@type": "lbco:electrode_surface_area",
+          "hasQualityMeasurement":
+                 {
+                  "@type":"QualityMeasurement", 
+                  "dqv:isMeasurementOf": "surface_area",
+                  "dqv:value": 1.131,
+                  "unitMeasure":"http://qudt.org/vocab/unit/CentiM2"
+                  }
+        }
+      ]
+    },
+    {
+      "@id": "ex:IFPEN_LIB_ELO_26_195",
+      "@type": "lbco:negative_electrode"
+    },
+    {
+      "@id": "ex:IFPEN_LIB_PRC_25_321",
+      "@type": "lbco:electrolyte"
+    },
+    {
+      "@id": "ex:IFPEN_LIB_PRF_26_414",
+      "@type": "lbco:characterization_process",
+      "lbco:has_participant": [
+        {
+          "@id": "_:b1",
+          "@type": "lbco:human_agent"
+        },
+        {
+          "@id": "ex:IFPEN_LIB_CEL_26_399",
+          "@type": "lbco:full_cell"
+        }
+      ]
+    },
+    {
+      "@id": "ex:IPFEN_PRP_26_1509",
+      "@type": "lbco:assemblying",
+      "lbco:has_input": [
+        {
+          "@id": "ex:IFPEN_LIB_ELO_26_195",
+          "@type": "lbco:negative_electrode"
+        },
+        {
+          "@id": "ex:IFPEN_LIB_AGT_25_1312",
+          "@type": "lbco:separator"
+        },
+        {
+          "@id": "ex:IFPEN_LIB_ELO_26_193",
+          "@type": "lbco:positive_electrode",
+          "lbco:has_property": [
+            {
+              "@id": "ex:PROPERTY_1",
+              "@type": "lbco:electrode_porosity",
+              "rdfs:comment": "Value and unit: 40 %"
+            },
+            {
+              "@id": "ex:PROPERTY_2",
+              "@type": "lbco:electrode_surface_area",
+              "rdfs:comment": "Value and unit: 1.131 cm^2"
+            }
+          ]
+        },
+        {
+          "@id": "ex:IFPEN_LIB_PRC_25_321",
+          "@type": "lbco:electrolyte"
+        }
+      ],
+      "lbco:has_output": {
+        "@id": "ex:IFPEN_LIB_CEL_26_399",
+        "@type": "lbco:full_cell"
+      },
+      "lbco:has_setting": [
+        {
+          "@id": "ex:SETTING_1",
+          "@type": "lbco:number_of_spacers",
+          "rdfs:comment": "Value and unit: 3 units"
+        },
+        {
+          "@id": "ex:SETTING_2",
+          "@type": "lbco:electrolyte_volume",
+          "rdfs:comment": "Value and unit: 100 microliters"
+        },
+        {
+          "@id": "_:b0",
+          "@type": "lbco:number_of_spacers",
+          "rdfs:comment": "3 units (another way to express it, with a blank node)"
+        }
+      ]
+    },
+    {
+      "@id": "ex:PROPERTY_1",
+      "@type": "lbco:electrode_porosity",
+      "rdfs:comment": "Value and unit: 40 %"
+    },
+    {
+      "@id": "ex:PROPERTY_2",
+      "@type": "lbco:electrode_surface_area",
+      "rdfs:comment": "Value and unit: 1.131 cm^2"
+    },
+    {
+      "@id": "ex:SETTING_1",
+      "@type": "lbco:number_of_spacers",
+      "rdfs:comment": "Value and unit: 3 units"
+    },
+    {
+      "@id": "ex:SETTING_2",
+      "@type": "lbco:electrolyte_volume",
+      "rdfs:comment": "Value and unit: 100 microliters"
+    },
+    {
+      "@id": "_:b0",
+      "@type": "lbco:number_of_spacers",
+      "rdfs:comment": "3 units (another way to express it, with a blank node)"
+    },
+    {
+      "@id": "_:b1",
+      "@type": "lbco:human_agent"
+    }
+ ]
+}
