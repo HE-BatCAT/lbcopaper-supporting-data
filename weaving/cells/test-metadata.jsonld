@@ -1,48 +1,54 @@
-{
-      "@context":{
-                  "@version":1.1,  
-                  "ex": "https://w3id.org/batcat/scenarios/lib_cell_example#",
-                  "lbco": "https://w3id.org/batcat#",
-                  "dc":"http://purl.org/dc/elements/1.1/",
-                  "dcterms": "http://purl.org/dc/terms/",  
-                  "mod":"https://w3id.org/mod#",
-                  "owl":"http://www.w3.org/2002/07/owl#",
-                  "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",  
-                  "rdfs":"http://www.w3.org/2000/01/rdf-schema#",
-                  "skos":"http://www.w3.org/2004/02/skos/core#",
-                  "xs":"http://www.w3.org/2001/XMLSchema#",
-                  "dqv" : "http://www.w3.org/ns/dqv#",
-                  "hasQualityMeasurement": "dqv:hasQualityMeasurement",
-                  "QualityMeasurement": "dqv:QualityMeasurement",
-                  "value": "dqv:value",
-                  "isMeasurementOf": "dqv:isMeasurementOf",
-                  "Metric": "dqv:Metric",
-                  "inDimension": "dqv:inDimension",
-                  "precision": "dqv:precision",
-                  "expectedDataType": "dqv:expectedDataType",
-                  "unitMeasure": {
-		                  "@id": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure",
-		                  "@type": "@id"
-		                }
-                 },
-
- "@graph": [
-   { 
-   "@id":"https://w3id.org/batcat/scenarios/optimization_example",
-   "owl:versionInfo": "version 0.1.0",
-  "dcterms:contributor": [
+ {
+  "@context": {
+    "@version": 1.1,
+    "ex": "https://w3id.org/batcat/scenarios/lib_cell_example#",
+    "lbco": "https://w3id.org/batcat#",
+    "dc": "http://purl.org/dc/elements/1.1/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "mod": "https://w3id.org/mod#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xs": "http://www.w3.org/2001/XMLSchema#",
+    "dqv": "http://www.w3.org/ns/dqv#",
+    "hasQualityMeasurement": "dqv:hasQualityMeasurement",
+    "QualityMeasurement": "dqv:QualityMeasurement",
+    "value": "dqv:value",
+    "isMeasurementOf": "dqv:isMeasurementOf",
+    "Metric": "dqv:Metric",
+    "inDimension": "dqv:inDimension",
+    "precision": "dqv:precision",
+    "expectedDataType": "dqv:expectedDataType",
+    "unitMeasure": {
+      "@id": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure",
+      "@type": "@id"
+    },
+    "computedOn": {
+      "@id": "https://www.w3.org/TR/vocab-dqv/#dqv:computedOn",
+      "@type": "@id",
+      "@context": {
+        "@base": "https://www.example.com/distribution/",
+        "@propagate": false
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@id": "https://w3id.org/batcat/scenarios/optimization_example",
+      "dcterms:contributor": [
         "Daniele Toti (ORCID 0000-0002-9668-6961)",
         "Gerhard Goldbeck (ORCID 0000-0002-4181-2852)",
         "Martin T. Horsch (ORCID 0000-0002-9464-6739)"
       ],
-     "dcterms:creator": [
+      "dcterms:creator": [
         "Martin Petit (ORCID 0000-0002-4226-6689)",
         "Noel Vizcaino (ORCID 0000-0001-7608-9484)",
         "Silvia Chiacchiera (ORCID 0000-0003-0422-7870)"
       ],
-      "dcterms:license":"https://www.gnu.org/licenses/lgpl-3.0.en.html",
-      "http://purl.org/dc/terms/modified": "2026-11-04",
-      "http://purl.org/dc/terms/title": "BatCAT core ontologies: LIB cell example",
+      "dcterms:license": "https://www.gnu.org/licenses/lgpl-3.0.en.html",
+      "dcterms:modified": "2026-11-04",
+      "dcterms:title": "BatCAT core ontologies: LIB cell example",
       "rdfs:comment": "The authors acknowledge funding from the European Union's Horizon Europe research and\ninnovation programme under grant agreement no. 101137725, Battery Cell Assembly Twin (BatCAT).",
       "owl:imports": [
         {
@@ -57,23 +63,225 @@
         {
           "@id": "https://w3id.org/batcat/battery"
         }
-      ]
-      
-  },
-     { 
-     "@id":"surface_area",
-     "@type":"dqv:Metric",
-     "skos:definition": "Spatial resolution of a dataset expressed as distance",
-     "dqv:expectedDataType": "xsd:decimal",
-     "dqv:inDimension" : "dqv:precision" 
+      ],
+      "owl:versionInfo": "version 0.1.0"
     },
-      {
+    {
+      "@id": "ex:count",
+      "@type": "Metric",
+      "skos:definition": "number of items",
+      "expectedDataType": "xsd:integer"
+    },
+    {
+      "@id": "ex:ratio",
+      "@type": "Metric",
+      "skos:definition": "0.0 to 1.00 ratio",
+      "expectedDataType": "xsd:double",
+      "inDimension": "dqv:completeness"
+    },
+    {
+      "@id": "ex:voltage",
+      "@type": "Metric",
+      "skos:definition": "Electric potential",
+      "expectedDataType": "xsd:double",
+      "inDimension": "dqv:precision"
+    },
+    {
+      "@id": "ex:electricIntensity",
+      "@type": "Metric",
+      "skos:definition": "Amperage",
+      "expectedDataType": "xsd:double",
+      "inDimension": "dqv:precision"
+    },
+    {
+      "@id": "ex:temperatureC",
+      "@type": "Metric",
+      "skos:definition": "Temperature in Celsius",
+      "expectedDataType": "xsd:double",
+      "inDimension": "dqv:precision"
+    },
+    {
+      "@id": "ex:volume",
+      "@type": "Metric",
+      "skos:definition": "Volume in litres",
+      "expectedDataType": "xsd:double",
+      "inDimension": "dqv:precision"
+    },
+    {
+      "@id": "ex:charge",
+      "@type": "Metric",
+      "skos:definition": "mA-hour",
+      "expectedDataType": "xsd:double",
+      "inDimension": "dqv:precision"
+    },
+    {
+      "@id": "ex:surface_area",
+      "@type": "Metric",
+      "skos:definition": "Spatial resolution of a dataset expressed as distance",
+      "expectedDataType": "xsd:integer",
+      "inDimension": "dqv:precision"
+    },
+    {
+      "@id": "PROPERTY_C1",
+      "@type": "lbco:full_cell_capacity",
+      "hasQualityMeasurement": {
+        "@type": "QualityMeasurement",
+        "unitMeasure": "http://qudt.org/vocab/unit/MilliA-HR",
+        "isMeasurementOf": "ex:charge",
+        "value": 2.28
+      },
+      "computedOn":"9f9b19f495b1d64e2a576ff09217157b"
+    },
+    {
+      "@id": "PROPERTY_C2",
+      "@type": "lbco:cell_minimum_voltage",
+      "hasQualityMeasurement": {
+        "@type": "QualityMeasurement",
+        "unitMeasure": "http://qudt.org/vocab/unit/V",
+        "isMeasurementOf": "ex:voltage",
+        "value": 2.5
+      }
+    },
+    {
+      "@id": "PROPERTY_C3",
+      "@type": "lbco:full_cell_capacity",
+      "hasQualityMeasurement": {
+        "@type": "QualityMeasurement",
+        "unitMeasure": "http://qudt.org/vocab/unit/V",
+        "isMeasurementOf": "ex:voltage",
+        "value": 4.2
+      }
+    },
+    {
+      "@id": "ex:PROPERTY_1",
+      "@type": "lbco:electrode_porosity",
+      "rdfs:comment": "Value and unit: 40 %",
+      "hasQualityMeasurement": {
+        "@type": "QualityMeasurement",
+        "isMeasurementOf": "ex:ratio",
+        "value": 0.4
+      }
+    },
+    {
+      "@id": "ex:PROPERTY_2",
+      "@type": "lbco:electrode_surface_area",
+      "rdfs:comment": "Value and unit: 1.131 cm^2",
+      "hasQualityMeasurement": {
+        "@type": "QualityMeasurement",
+        "unitMeasure": "http://qudt.org/vocab/unit/CentiM2",
+        "isMeasurementOf": "ex:surface_area",
+        "value": 1.131
+      }
+    },
+    {
+      "@id": "PROPERTY_3",
+      "@type": "lbco:electrode_porosity",
+      "hasQualityMeasurement": {
+        "@type": "QualityMeasurement",
+        "isMeasurementOf": "ex:ratio",
+        "value": 0.31
+      }
+    },
+    {
+      "@id": "PROPERTY_4",
+      "@type": "lbco:electrode_surface_area",
+      "hasQualityMeasurement": {
+        "@type": "QualityMeasurement",
+        "unitMeasure": "http://qudt.org/vocab/unit/CentiM2",
+        "isMeasurementOf": "ex:surface_area",
+        "value": 1.539
+      }
+    },
+    {
+      "@id": "PROPERTY_5",
+      "@type": "lbco:separator_porosity",
+      "hasQualityMeasurement": {
+        "@type": "QualityMeasurement",
+        "isMeasurementOf": "ex:ratio",
+        "value": 0.39
+      }
+    },
+    {
+      "@id": "PROPERTY_6",
+      "@type": "lbco:separator_thickness",
+      "hasQualityMeasurement": {
+        "@type": "QualityMeasurement",
+        "unitMeasure": "http://qudt.org/vocab/unit/MicroM",
+        "isMeasurementOf": "ex:count",
+        "value": 25
+      }
+    },
+    {
+      "@id": "PROPERTY_7",
+      "@type": "lbco:electrolyte_composition",
+      "hasQualityMeasurement": {
+        "@type": "QualityMeasurement",
+        "unitMeasure": "http://qudt.org/vocab/unit/MicroM",
+        "isMeasurementOf": "ex:surface_area",
+        "value": 25
+      }
+    },
+    {
+      "@id": "ex:SETTING_1",
+      "@type": "lbco:number_of_spacers",
+      "rdfs:comment": "Value and unit: 3 units",
+      "hasQualityMeasurement": {
+        "@type": "QualityMeasurement",
+        "isMeasurementOf": "ex:count",
+        "value": 3
+      }
+    },
+    {
+      "@id": "ex:SETTING_2",
+      "@type": "lbco:electrolyte_volume",
+      "unitMeasure": "http://qudt.org/vocab/unit/MicroL",
+      "rdfs:comment": "Value and unit: 100 microliters",
+      "hasQualityMeasurement": {
+        "@type": "QualityMeasurement",
+        "isMeasurementOf": "ex:volume",
+        "value": 100
+      }
+    },
+    {
+      "@id": "ex:SETTING_3",
+      "@type": "lbco:temperature",
+      "rdfs:comment": "Value and unit: 25 degree Celsius",
+      "hasQualityMeasurement": {
+        "@type": "QualityMeasurement",
+        "unitMeasure": "http://qudt.org/vocab/unit/DEG_C",
+        "isMeasurementOf": "ex:temperatureC",
+        "value": 25
+      }
+    },
+    {
+      "@id": "ex:SETTING_4",
+      "@type": "lbco:charging_current",
+      "rdfs:comment": "Value and unit: 2.08E-04 A (0.000208A)",
+      "hasQualityMeasurement": {
+        "@type": "QualityMeasurement",
+        "unitMeasure": "http://qudt.org/vocab/unit/MicroA",
+        "isMeasurementOf": "ex:electricIntensity",
+        "value": 0.000208
+      }
+    },
+    {
       "@id": "ex:IFPEN_LIB_AGT_25_1312",
-      "@type": "lbco:separator"
+      "@type": "lbco:separator",
+      "rdfs:comment": "three-layer PP/PE/PP structure",
+      "lbco:has_property": [
+        "ex:PROPERTY_C5",
+        "ex:PROPERTY_C6"
+      ]
     },
     {
       "@id": "ex:IFPEN_LIB_CEL_26_399",
-      "@type": "lbco:full_cell"
+      "@type": "lbco:full_cell",
+      "lbco:has_ID": "CEL-26-399",
+      "lbco:has_property": [
+        "ex:PROPERTY_C1",
+        "ex:PROPERTY_C2",
+        "ex:PROPERTY_C3"
+      ]
     },
     {
       "@id": "ex:IFPEN_LIB_ELO_26_193",
@@ -81,25 +289,22 @@
       "lbco:has_property": [
         {
           "@id": "ex:PROPERTY_1",
-          "@type": "lbco:electrode_porosity",
-          "rdfs:comment": "Value and unit: 40 %"
+          "@type": "lbco:electrode_porosity"
         },
         {
           "@id": "ex:PROPERTY_2",
-          "@type": "lbco:electrode_surface_area",
-          "hasQualityMeasurement":
-                 {
-                  "@type":"QualityMeasurement", 
-                  "dqv:isMeasurementOf": "surface_area",
-                  "dqv:value": 1.131,
-                  "unitMeasure":"http://qudt.org/vocab/unit/CentiM2"
-                  }
+          "@type": "lbco:electrode_surface_area"
         }
       ]
     },
     {
       "@id": "ex:IFPEN_LIB_ELO_26_195",
-      "@type": "lbco:negative_electrode"
+      "@type": "lbco:negative_electrode",
+      "lbco:has_ID": "CEL-26-195",
+      "lbco:has_property": [
+        "ex:PROPERTY_3",
+        "ex:PROPERTY_4"
+      ]
     },
     {
       "@id": "ex:IFPEN_LIB_PRC_25_321",
@@ -110,7 +315,7 @@
       "@type": "lbco:characterization_process",
       "lbco:has_participant": [
         {
-          "@id": "_:b1",
+          "@id": "ex:HUMAN_1",
           "@type": "lbco:human_agent"
         },
         {
@@ -122,6 +327,7 @@
     {
       "@id": "ex:IPFEN_PRP_26_1509",
       "@type": "lbco:assemblying",
+      "lbco:has_ID": "PRP-26-1509",
       "lbco:has_input": [
         {
           "@id": "ex:IFPEN_LIB_ELO_26_195",
@@ -132,18 +338,24 @@
           "@type": "lbco:separator"
         },
         {
+          "@id": "ex:IFPEN_LIB_PRC_25_321",
+          "@type": "lbco:negative_electrode"
+        },
+        {
+          "@id": "ex:IFPEN_LIB_CEL_26_399",
+          "@type": "lbco:negative_electrode"
+        },
+        {
           "@id": "ex:IFPEN_LIB_ELO_26_193",
           "@type": "lbco:positive_electrode",
           "lbco:has_property": [
             {
               "@id": "ex:PROPERTY_1",
-              "@type": "lbco:electrode_porosity",
-              "rdfs:comment": "Value and unit: 40 %"
+              "@type": "lbco:electrode_porosity"
             },
             {
               "@id": "ex:PROPERTY_2",
-              "@type": "lbco:electrode_surface_area",
-              "rdfs:comment": "Value and unit: 1.131 cm^2"
+              "@type": "lbco:electrode_surface_area"
             }
           ]
         },
@@ -156,52 +368,23 @@
         "@id": "ex:IFPEN_LIB_CEL_26_399",
         "@type": "lbco:full_cell"
       },
-      "lbco:has_setting": [
-        {
-          "@id": "ex:SETTING_1",
-          "@type": "lbco:number_of_spacers",
-          "rdfs:comment": "Value and unit: 3 units"
-        },
-        {
-          "@id": "ex:SETTING_2",
-          "@type": "lbco:electrolyte_volume",
-          "rdfs:comment": "Value and unit: 100 microliters"
-        },
-        {
-          "@id": "_:b0",
-          "@type": "lbco:number_of_spacers",
-          "rdfs:comment": "3 units (another way to express it, with a blank node)"
-        }
-      ]
+      "lbco:has_setting": {
+        "@id": "ex:SETTING_1"
+      }
     },
     {
-      "@id": "ex:PROPERTY_1",
-      "@type": "lbco:electrode_porosity",
-      "rdfs:comment": "Value and unit: 40 %"
+      "@id": "ex:HUMAN_1",
+      "@type": "lbco:human_agent",
+      "lbco:has_ID": "girodn"
     },
     {
-      "@id": "ex:PROPERTY_2",
-      "@type": "lbco:electrode_surface_area",
-      "rdfs:comment": "Value and unit: 1.131 cm^2"
-    },
-    {
-      "@id": "ex:SETTING_1",
-      "@type": "lbco:number_of_spacers",
-      "rdfs:comment": "Value and unit: 3 units"
-    },
-    {
-      "@id": "ex:SETTING_2",
-      "@type": "lbco:electrolyte_volume",
-      "rdfs:comment": "Value and unit: 100 microliters"
-    },
-    {
-      "@id": "_:b0",
-      "@type": "lbco:number_of_spacers",
-      "rdfs:comment": "3 units (another way to express it, with a blank node)"
-    },
-    {
-      "@id": "_:b1",
-      "@type": "lbco:human_agent"
+      "@id": "ex:IFPEN_LIB_FORMING_MA_26_1563",
+      "@type": "lbco:forming",
+      "lbco:has_ID": "MA-26-1563",
+      "lbco:has_input": "ex:IFPEN_LIB_CEL_26_404",
+      "lbco:has_output": "ex:IFPEN_LIB_CEL_26_404",
+      "lbco:has_participant": "ex:HUMAN_1",
+      "lbco:has_setting": "ex:SETTING_4"
     }
- ]
+  ]
 }
