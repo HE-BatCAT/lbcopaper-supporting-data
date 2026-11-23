@@ -1,0 +1,1185 @@
+ {
+  "@context": {
+    "@version": 1.1,
+    "ex": "https://w3id.org/batcat/scenarios/lib_cell_example#",
+    "lbco": "https://w3id.org/batcat#",
+    "dc": "http://purl.org/dc/elements/1.1/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "mod": "https://w3id.org/mod#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xs": "http://www.w3.org/2001/XMLSchema#",
+    "dqv": "http://www.w3.org/ns/dqv#",
+    "hasQualityMeasurement": "dqv:hasQualityMeasurement",
+    "QualityMeasurement": "dqv:QualityMeasurement",
+    "value": "dqv:value",
+    "isMeasurementOf": "dqv:isMeasurementOf",
+    "Metric": "dqv:Metric",
+    "inDimension": "dqv:inDimension",
+    "precision": "dqv:precision",
+    "expectedDataType": "dqv:expectedDataType",
+    "unitMeasure": {
+      "@id": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure",
+      "@type": "@id"
+    },
+    "computedOn": {
+      "@id": "https://www.w3.org/TR/vocab-dqv/#dqv:computedOn",
+      "@type": "@id",
+      "@context": {
+        "@base": "https://www.example.com/distribution/",
+        "@propagate": false
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@id": "https://w3id.org/batcat/scenarios/optimization_example",
+      "dcterms:contributor": [
+        "Daniele Toti (ORCID 0000-0002-9668-6961)",
+        "Gerhard Goldbeck (ORCID 0000-0002-4181-2852)",
+        "Martin T. Horsch (ORCID 0000-0002-9464-6739)"
+      ],
+      "dcterms:creator": [
+        "Martin Petit (ORCID 0000-0002-4226-6689)",
+        "Noel Vizcaino (ORCID 0000-0001-7608-9484)",
+        "Silvia Chiacchiera (ORCID 0000-0003-0422-7870)"
+      ],
+      "dcterms:license": "https://www.gnu.org/licenses/lgpl-3.0.en.html",
+      "dcterms:modified": "2026-11-04",
+      "dcterms:title": "BatCAT core ontologies: LIB cell example",
+      "rdfs:comment": "The authors acknowledge funding from the European Union's Horizon Europe research and\ninnovation programme under grant agreement no. 101137725, Battery Cell Assembly Twin (BatCAT).",
+      "owl:imports": [
+        {
+          "@id": "https://w3id.org/batcat/higher"
+        },
+        {
+          "@id": "https://w3id.org/batcat/characterization"
+        },
+        {
+          "@id": "https://w3id.org/batcat/manufacturing"
+        },
+        {
+          "@id": "https://w3id.org/batcat/battery"
+        }
+      ],
+      "owl:versionInfo": "version 0.1.0"
+    },
+    {
+      "@id": "ex:count",
+      "@type": "Metric",
+      "skos:definition": "number of items",
+      "expectedDataType": "xsd:integer"
+    },
+    {
+      "@id": "ex:ratio",
+      "@type": "Metric",
+      "skos:definition": "0.0 to 1.00 ratio",
+      "expectedDataType": "xsd:double",
+      "inDimension": "dqv:completeness"
+    },
+    {
+      "@id": "ex:voltage",
+      "@type": "Metric",
+      "skos:definition": "Electric potential",
+      "expectedDataType": "xsd:double",
+      "inDimension": "dqv:precision"
+    },
+    {
+      "@id": "ex:electricIntensity",
+      "@type": "Metric",
+      "skos:definition": "Amperage",
+      "expectedDataType": "xsd:double",
+      "inDimension": "dqv:precision"
+    },
+    {
+      "@id": "ex:temperatureC",
+      "@type": "Metric",
+      "skos:definition": "Temperature in Celsius",
+      "expectedDataType": "xsd:double",
+      "inDimension": "dqv:precision"
+    },
+    {
+      "@id": "ex:volume",
+      "@type": "Metric",
+      "skos:definition": "Volume in litres",
+      "expectedDataType": "xsd:double",
+      "inDimension": "dqv:precision"
+    },
+    {
+      "@id": "ex:charge",
+      "@type": "Metric",
+      "skos:definition": "mA-hour",
+      "expectedDataType": "xsd:double",
+      "inDimension": "dqv:precision"
+    },
+    {
+      "@id": "ex:surface_area",
+      "@type": "Metric",
+      "skos:definition": "Spatial resolution of a dataset expressed as distance",
+      "expectedDataType": "xsd:integer",
+      "inDimension": "dqv:precision"
+    },
+    {
+      "@id": "PROPERTY_C1_399",
+      "@type": "lbco:full_cell_capacity",
+      "hasQualityMeasurement": {
+        "@type": "QualityMeasurement",
+        "unitMeasure": "http://qudt.org/vocab/unit/MilliA-HR",
+        "isMeasurementOf": "ex:charge",
+        "value": 2.28
+      },
+      "computedOn":"9f9b19f495b1d64e2a576ff09217157b"
+    },
+    {
+      "@id": "PROPERTY_C2_399",
+      "@type": "lbco:cell_minimum_voltage",
+      "hasQualityMeasurement": {
+        "@type": "QualityMeasurement",
+        "unitMeasure": "http://qudt.org/vocab/unit/V",
+        "isMeasurementOf": "ex:voltage",
+        "value": 2.5
+      }
+    },
+    {
+      "@id": "PROPERTY_C3_399",
+      "@type": "lbco:full_cell_capacity",
+      "hasQualityMeasurement": {
+        "@type": "QualityMeasurement",
+        "unitMeasure": "http://qudt.org/vocab/unit/V",
+        "isMeasurementOf": "ex:voltage",
+        "value": 4.2
+      }
+    },
+    {
+      "@id": "ex:PROPERTY_1_399",
+      "@type": "lbco:electrode_porosity",
+      "rdfs:comment": "Value and unit: 40 %",
+      "hasQualityMeasurement": {
+        "@type": "QualityMeasurement",
+        "isMeasurementOf": "ex:ratio",
+        "value": 0.4
+      }
+    },
+    {
+      "@id": "ex:PROPERTY_2_399",
+      "@type": "lbco:electrode_surface_area",
+      "rdfs:comment": "Value and unit: 1.131 cm^2",
+      "hasQualityMeasurement": {
+        "@type": "QualityMeasurement",
+        "unitMeasure": "http://qudt.org/vocab/unit/CentiM2",
+        "isMeasurementOf": "ex:surface_area",
+        "value": 1.131
+      }
+    },
+    {
+      "@id": "PROPERTY_3_399",
+      "@type": "lbco:electrode_porosity",
+      "hasQualityMeasurement": {
+        "@type": "QualityMeasurement",
+        "isMeasurementOf": "ex:ratio",
+        "value": 0.31
+      }
+    },
+    {
+      "@id": "PROPERTY_4_399",
+      "@type": "lbco:electrode_surface_area",
+      "hasQualityMeasurement": {
+        "@type": "QualityMeasurement",
+        "unitMeasure": "http://qudt.org/vocab/unit/CentiM2",
+        "isMeasurementOf": "ex:surface_area",
+        "value": 1.539
+      }
+    },
+    {
+      "@id": "PROPERTY_5_399",
+      "@type": "lbco:separator_porosity",
+      "hasQualityMeasurement": {
+        "@type": "QualityMeasurement",
+        "isMeasurementOf": "ex:ratio",
+        "value": 0.39
+      }
+    },
+    {
+      "@id": "PROPERTY_6_399",
+      "@type": "lbco:separator_thickness",
+      "hasQualityMeasurement": {
+        "@type": "QualityMeasurement",
+        "unitMeasure": "http://qudt.org/vocab/unit/MicroM",
+        "isMeasurementOf": "ex:count",
+        "value": 25
+      }
+    },
+    {
+      "@id": "PROPERTY_7_399",
+      "@type": "lbco:electrolyte_composition",
+      "hasQualityMeasurement": {
+        "@type": "QualityMeasurement",
+        "unitMeasure": "http://qudt.org/vocab/unit/MicroM",
+        "isMeasurementOf": "ex:surface_area",
+        "value": 25
+      }
+    },
+    {
+      "@id": "ex:SETTING_1_399",
+      "@type": "lbco:number_of_spacers",
+      "rdfs:comment": "Value and unit: 3 units",
+      "hasQualityMeasurement": {
+        "@type": "QualityMeasurement",
+        "isMeasurementOf": "ex:count",
+        "value": 3
+      }
+    },
+    {
+      "@id": "ex:SETTING_2_399",
+      "@type": "lbco:electrolyte_volume",
+      "unitMeasure": "http://qudt.org/vocab/unit/MicroL",
+      "rdfs:comment": "Value and unit: 100 microliters",
+      "hasQualityMeasurement": {
+        "@type": "QualityMeasurement",
+        "isMeasurementOf": "ex:volume",
+        "value": 100
+      }
+    },
+    {
+      "@id": "ex:SETTING_3_399",
+      "@type": "lbco:temperature",
+      "rdfs:comment": "Value and unit: 25 degree Celsius",
+      "hasQualityMeasurement": {
+        "@type": "QualityMeasurement",
+        "unitMeasure": "http://qudt.org/vocab/unit/DEG_C",
+        "isMeasurementOf": "ex:temperatureC",
+        "value": 25
+      }
+    },
+    {
+      "@id": "ex:SETTING_4",
+      "@type": "lbco:charging_current",
+      "rdfs:comment": "Value and unit: 2.08E-04 A (0.000208A)",
+      "hasQualityMeasurement": {
+        "@type": "QualityMeasurement",
+        "unitMeasure": "http://qudt.org/vocab/unit/MicroA",
+        "isMeasurementOf": "ex:electricIntensity",
+        "value": 0.000208
+      }
+    },
+    {
+      "@id": "ex:IFPEN_LIB_AGT_25_1312",
+      "@type": "lbco:separator",
+      "rdfs:comment": "three-layer PP/PE/PP structure",
+      "lbco:has_property": [
+        "ex:PROPERTY_5_399",
+        "ex:PROPERTY_6_399"
+      ]
+    },
+    {
+      "@id": "ex:IFPEN_LIB_CEL_26_399",
+      "@type": "lbco:full_cell",
+      "lbco:has_ID": "CEL-26-399",
+      "lbco:has_property": [
+        "ex:PROPERTY_C1_399",
+        "ex:PROPERTY_C2_399",
+        "ex:PROPERTY_C3_399"
+      ]
+    },
+    {
+      "@id": "ex:IFPEN_LIB_ELO_26_193",
+      "@type": "lbco:positive_electrode",
+      "lbco:has_property": [
+        {
+          "@id": "ex:PROPERTY_1_399",
+          "@type": "lbco:electrode_porosity"
+        },
+        {
+          "@id": "ex:PROPERTY_2_399",
+          "@type": "lbco:electrode_surface_area"
+        }
+      ]
+    },
+    {
+      "@id": "ex:IFPEN_LIB_ELO_26_195",
+      "@type": "lbco:negative_electrode",
+      "lbco:has_ID": "CEL-26-195",
+      "lbco:has_property": [
+        "ex:PROPERTY_3_399",
+        "ex:PROPERTY_4_399"
+      ]
+    },
+    {
+      "@id": "ex:IFPEN_LIB_PRC_25_321",
+      "@type": "lbco:electrolyte"
+    },
+    {
+      "@id": "ex:IFPEN_LIB_PRF_26_414",
+      "@type": "lbco:characterization_process",
+      "lbco:has_participant": [
+        {
+          "@id": "ex:HUMAN_1",
+          "@type": "lbco:human_agent"
+        },
+        {
+          "@id": "ex:IFPEN_LIB_CEL_26_399",
+          "@type": "lbco:full_cell"
+        }
+      ]
+    },
+    {
+      "@id": "ex:IPFEN_PRP_26_1509",
+      "@type": "lbco:assemblying",
+      "lbco:has_ID": "PRP-26-1509",
+      "lbco:has_input": [
+        {
+          "@id": "ex:IFPEN_LIB_ELO_26_195",
+          "@type": "lbco:negative_electrode"
+        },
+        {
+          "@id": "ex:IFPEN_LIB_AGT_25_1312",
+          "@type": "lbco:separator"
+        },
+        {
+          "@id": "ex:IFPEN_LIB_PRC_25_321",
+          "@type": "lbco:negative_electrode"
+        },
+        {
+          "@id": "ex:IFPEN_LIB_CEL_26_399",
+          "@type": "lbco:negative_electrode"
+        },
+        {
+          "@id": "ex:IFPEN_LIB_ELO_26_193",
+          "@type": "lbco:positive_electrode",
+          "lbco:has_property": [
+            {
+              "@id": "ex:PROPERTY_1_399",
+              "@type": "lbco:electrode_porosity"
+            },
+            {
+              "@id": "ex:PROPERTY_2_399",
+              "@type": "lbco:electrode_surface_area"
+            }
+          ]
+        },
+        {
+          "@id": "ex:IFPEN_LIB_PRC_25_321",
+          "@type": "lbco:electrolyte"
+        }
+      ],
+      "lbco:has_output": {
+        "@id": "ex:IFPEN_LIB_CEL_26_399",
+        "@type": "lbco:full_cell"
+      },
+      "lbco:has_setting": {
+        "@id": "ex:SETTING_1_399"
+      }
+    },
+    {
+      "@id": "ex:HUMAN_1",
+      "@type": "lbco:human_agent",
+      "lbco:has_ID": "girodn"
+    },
+    {
+      "@id": "ex:IFPEN_LIB_FORMING_MA_26_1563",
+      "@type": "lbco:forming",
+      "lbco:has_ID": "MA-26-1563",
+      "lbco:has_input": "ex:IFPEN_LIB_CEL_26_404",
+      "lbco:has_output": "ex:IFPEN_LIB_CEL_26_404",
+      "lbco:has_participant": "ex:HUMAN_1",
+      "lbco:has_setting": "ex:SETTING_4_399"
+    },
+    {
+      "@id": "PROPERTY_C1_400",
+      "@type": "lbco:full_cell_capacity",
+      "hasQualityMeasurement": {
+        "@type": "QualityMeasurement",
+        "unitMeasure": "http://qudt.org/vocab/unit/MilliA-HR",
+        "isMeasurementOf": "ex:charge",
+        "value": 2.28
+      },
+      "computedOn":"d968526b1b31c7a1157b20cd82c97481"
+    },
+    {
+      "@id": "PROPERTY_C2_400",
+      "@type": "lbco:cell_minimum_voltage",
+      "hasQualityMeasurement": {
+        "@type": "QualityMeasurement",
+        "unitMeasure": "http://qudt.org/vocab/unit/V",
+        "isMeasurementOf": "ex:voltage",
+        "value": 2.5
+      }
+    },
+    {
+      "@id": "PROPERTY_C3_400",
+      "@type": "lbco:full_cell_capacity",
+      "hasQualityMeasurement": {
+        "@type": "QualityMeasurement",
+        "unitMeasure": "http://qudt.org/vocab/unit/V",
+        "isMeasurementOf": "ex:voltage",
+        "value": 4.2
+      }
+    },
+    {
+      "@id": "ex:PROPERTY_1_400",
+      "@type": "lbco:electrode_porosity",
+      "rdfs:comment": "Value and unit: 40 %",
+      "hasQualityMeasurement": {
+        "@type": "QualityMeasurement",
+        "isMeasurementOf": "ex:ratio",
+        "value": 0.4
+      }
+    },
+    {
+      "@id": "ex:PROPERTY_2_400",
+      "@type": "lbco:electrode_surface_area",
+      "rdfs:comment": "Value and unit: 1.131 cm^2",
+      "hasQualityMeasurement": {
+        "@type": "QualityMeasurement",
+        "unitMeasure": "http://qudt.org/vocab/unit/CentiM2",
+        "isMeasurementOf": "ex:surface_area",
+        "value": 1.131
+      }
+    },
+    {
+      "@id": "PROPERTY_3_400",
+      "@type": "lbco:electrode_porosity",
+      "hasQualityMeasurement": {
+        "@type": "QualityMeasurement",
+        "isMeasurementOf": "ex:ratio",
+        "value": 0.31
+      }
+    },
+    {
+      "@id": "PROPERTY_4_400",
+      "@type": "lbco:electrode_surface_area",
+      "hasQualityMeasurement": {
+        "@type": "QualityMeasurement",
+        "unitMeasure": "http://qudt.org/vocab/unit/CentiM2",
+        "isMeasurementOf": "ex:surface_area",
+        "value": 1.539
+      }
+    },
+    {
+      "@id": "PROPERTY_5_400",
+      "@type": "lbco:separator_porosity",
+      "hasQualityMeasurement": {
+        "@type": "QualityMeasurement",
+        "isMeasurementOf": "ex:ratio",
+        "value": 0.44
+      }
+    },
+    {
+      "@id": "PROPERTY_6_400",
+      "@type": "lbco:separator_thickness",
+      "hasQualityMeasurement": {
+        "@type": "QualityMeasurement",
+        "unitMeasure": "http://qudt.org/vocab/unit/MicroM",
+        "isMeasurementOf": "ex:count",
+        "value": 20
+      }
+    },
+    {
+      "@id": "PROPERTY_7_400",
+      "@type": "lbco:electrolyte_composition",
+      "hasQualityMeasurement": {
+        "@type": "QualityMeasurement",
+        "unitMeasure": "http://qudt.org/vocab/unit/MicroM",
+        "isMeasurementOf": "ex:surface_area",
+        "value": 25
+      }
+    },
+    {
+      "@id": "ex:SETTING_1_400",
+      "@type": "lbco:number_of_spacers",
+      "rdfs:comment": "Value and unit: 3 units",
+      "hasQualityMeasurement": {
+        "@type": "QualityMeasurement",
+        "isMeasurementOf": "ex:count",
+        "value": 3
+      }
+    },
+    {
+      "@id": "ex:SETTING_2_400",
+      "@type": "lbco:electrolyte_volume",
+      "unitMeasure": "http://qudt.org/vocab/unit/MicroL",
+      "rdfs:comment": "Value and unit: 100 microliters",
+      "hasQualityMeasurement": {
+        "@type": "QualityMeasurement",
+        "isMeasurementOf": "ex:volume",
+        "value": 100
+      }
+    },
+    {
+      "@id": "ex:SETTING_3_400",
+      "@type": "lbco:temperature",
+      "rdfs:comment": "Value and unit: 25 degree Celsius",
+      "hasQualityMeasurement": {
+        "@type": "QualityMeasurement",
+        "unitMeasure": "http://qudt.org/vocab/unit/DEG_C",
+        "isMeasurementOf": "ex:temperatureC",
+        "value": 25
+      }
+    },
+    {
+      "@id": "ex:SETTING_4_400",
+      "@type": "lbco:charging_current",
+      "rdfs:comment": "Value and unit: 2.08E-04 A (0.000208A)",
+      "hasQualityMeasurement": {
+        "@type": "QualityMeasurement",
+        "unitMeasure": "http://qudt.org/vocab/unit/MicroA",
+        "isMeasurementOf": "ex:electricIntensity",
+        "value": 0.000208
+      }
+    },
+    {
+      "@id": "ex:IFPEN_LIB_AGT-24-10377",
+      "@type": "lbco:separator",
+      "rdfs:comment": "three-layer PP/PE/PP structure",
+      "lbco:has_property": [
+        "ex:PROPERTY_5_400",
+        "ex:PROPERTY_6_400"
+      ]
+    },
+    {
+      "@id": "ex:IFPEN_LIB_CEL_26_400",
+      "@type": "lbco:full_cell",
+      "lbco:has_ID": "CEL-26-400",
+      "lbco:has_property": [
+        "ex:PROPERTY_C1_400",
+        "ex:PROPERTY_C2_400",
+        "ex:PROPERTY_C3_400"
+      ]
+    },
+    {
+      "@id": "ex:IFPEN_LIB_ELO_26_194",
+      "@type": "lbco:positive_electrode",
+      "lbco:has_property": [
+        {
+          "@id": "ex:PROPERTY_1_400",
+          "@type": "lbco:electrode_porosity"
+        },
+        {
+          "@id": "ex:PROPERTY_2_400",
+          "@type": "lbco:electrode_surface_area"
+        }
+      ]
+    },
+    {
+      "@id": "ex:IFPEN_LIB_ELO_26_195",
+      "@type": "lbco:negative_electrode",
+      "lbco:has_ID": "CEL-26-195",
+      "lbco:has_property": [
+        "ex:PROPERTY_3_400",
+        "ex:PROPERTY_4_400"
+      ]
+    },
+    {
+      "@id": "ex:IFPEN_LIB_PRC_25_321",
+      "@type": "lbco:electrolyte"
+    },
+    {
+      "@id": "ex:IFPEN_LIB_PRF_26_415",
+      "@type": "lbco:characterization_process",
+      "lbco:has_participant": [
+        {
+          "@id": "ex:HUMAN_1",
+          "@type": "lbco:human_agent"
+        },
+        {
+          "@id": "ex:IFPEN_LIB_CEL_26_400",
+          "@type": "lbco:full_cell"
+        }
+      ]
+    },
+    {
+      "@id": "ex:IPFEN_PRP_26_1511",
+      "@type": "lbco:assemblying",
+      "lbco:has_ID": "PRP-26-1511",
+      "lbco:has_input": [
+        {
+          "@id": "ex:IFPEN_LIB_ELO_26_199",
+          "@type": "lbco:negative_electrode"
+        },
+        {
+          "@id": "ex:IFPEN_LIB_AGT-25-1312",
+          "@type": "lbco:separator"
+        },
+        {
+          "@id": "ex:IFPEN_LIB_PRC_25_321",
+          "@type": "lbco:negative_electrode"
+        },
+        {
+          "@id": "ex:IFPEN_LIB_CEL_26_400",
+          "@type": "lbco:negative_electrode"
+        },
+        {
+          "@id": "ex:IFPEN_LIB_ELO_26_400",
+          "@type": "lbco:positive_electrode",
+          "lbco:has_property": [
+            {
+              "@id": "ex:PROPERTY_1_400",
+              "@type": "lbco:electrode_porosity"
+            },
+            {
+              "@id": "ex:PROPERTY_2_400",
+              "@type": "lbco:electrode_surface_area"
+            }
+          ]
+        },
+        {
+          "@id": "ex:IFPEN_LIB_PRC_25_321",
+          "@type": "lbco:electrolyte"
+        }
+      ],
+      "lbco:has_output": {
+        "@id": "ex:IFPEN_LIB_CEL_26_400",
+        "@type": "lbco:full_cell"
+      },
+      "lbco:has_setting": {
+        "@id": "ex:SETTING_1_400"
+      }
+    },
+    {
+      "@id": "ex:HUMAN_1",
+      "@type": "lbco:human_agent",
+      "lbco:has_ID": "girodn"
+    },
+    {
+      "@id": "ex:IFPEN_LIB_FORMING_MA_26_1563",
+      "@type": "lbco:forming",
+      "lbco:has_ID": "MA-26-1563",
+      "lbco:has_input": "ex:IFPEN_LIB_CEL_26_404",
+      "lbco:has_output": "ex:IFPEN_LIB_CEL_26_404",
+      "lbco:has_participant": "ex:HUMAN_1",
+      "lbco:has_setting": "ex:SETTING_4_400"
+    },
+    {
+      "@id": "PROPERTY_C1_401",
+      "@type": "lbco:full_cell_capacity",
+      "hasQualityMeasurement": {
+        "@type": "QualityMeasurement",
+        "unitMeasure": "http://qudt.org/vocab/unit/MilliA-HR",
+        "isMeasurementOf": "ex:charge",
+        "value": 2.09
+      },
+      "computedOn":"d395b76b826f7e390ca0f67c0f81d798"
+    },
+    {
+      "@id": "PROPERTY_C2_401",
+      "@type": "lbco:cell_minimum_voltage",
+      "hasQualityMeasurement": {
+        "@type": "QualityMeasurement",
+        "unitMeasure": "http://qudt.org/vocab/unit/V",
+        "isMeasurementOf": "ex:voltage",
+        "value": 3.8
+      }
+    },
+    {
+      "@id": "PROPERTY_C3_401",
+      "@type": "lbco:full_cell_capacity",
+      "hasQualityMeasurement": {
+        "@type": "QualityMeasurement",
+        "unitMeasure": "http://qudt.org/vocab/unit/V",
+        "isMeasurementOf": "ex:voltage",
+        "value": 4.2
+      }
+    },
+    {
+      "@id": "ex:PROPERTY_1_401",
+      "@type": "lbco:electrode_porosity",
+      "rdfs:comment": "Value and unit: 40 %",
+      "hasQualityMeasurement": {
+        "@type": "QualityMeasurement",
+        "isMeasurementOf": "ex:ratio",
+        "value": 0.41
+      }
+    },
+    {
+      "@id": "ex:PROPERTY_2_401",
+      "@type": "lbco:electrode_surface_area",
+      "rdfs:comment": "Value and unit: 1.131 cm^2",
+      "hasQualityMeasurement": {
+        "@type": "QualityMeasurement",
+        "unitMeasure": "http://qudt.org/vocab/unit/CentiM2",
+        "isMeasurementOf": "ex:surface_area",
+        "value": 1.131
+      }
+    },
+    {
+      "@id": "PROPERTY_3_401",
+      "@type": "lbco:electrode_porosity",
+      "hasQualityMeasurement": {
+        "@type": "QualityMeasurement",
+        "isMeasurementOf": "ex:ratio",
+        "value": 0.31
+      }
+    },
+    {
+      "@id": "PROPERTY_4_401",
+      "@type": "lbco:electrode_surface_area",
+      "hasQualityMeasurement": {
+        "@type": "QualityMeasurement",
+        "unitMeasure": "http://qudt.org/vocab/unit/CentiM2",
+        "isMeasurementOf": "ex:surface_area",
+        "value": 1.539
+      }
+    },
+    {
+      "@id": "PROPERTY_5_401",
+      "@type": "lbco:separator_porosity",
+      "hasQualityMeasurement": {
+        "@type": "QualityMeasurement",
+        "isMeasurementOf": "ex:ratio",
+        "value": 0.39
+      }
+    },
+    {
+      "@id": "PROPERTY_6_401",
+      "@type": "lbco:separator_thickness",
+      "hasQualityMeasurement": {
+        "@type": "QualityMeasurement",
+        "unitMeasure": "http://qudt.org/vocab/unit/MicroM",
+        "isMeasurementOf": "ex:count",
+        "value": 25
+      }
+    },
+    {
+      "@id": "PROPERTY_7_401",
+      "@type": "lbco:electrolyte_composition",
+      "hasQualityMeasurement": {
+        "@type": "QualityMeasurement",
+        "unitMeasure": "http://qudt.org/vocab/unit/MicroM",
+        "isMeasurementOf": "ex:surface_area",
+        "value": 25
+      }
+    },
+    {
+      "@id": "ex:SETTING_1_401",
+      "@type": "lbco:number_of_spacers",
+      "rdfs:comment": "Value and unit: 3 units",
+      "hasQualityMeasurement": {
+        "@type": "QualityMeasurement",
+        "isMeasurementOf": "ex:count",
+        "value": 3
+      }
+    },
+    {
+      "@id": "ex:SETTING_2_401",
+      "@type": "lbco:electrolyte_volume",
+      "unitMeasure": "http://qudt.org/vocab/unit/MicroL",
+      "rdfs:comment": "Value and unit: 100 microliters",
+      "hasQualityMeasurement": {
+        "@type": "QualityMeasurement",
+        "isMeasurementOf": "ex:volume",
+        "value": 100
+      }
+    },
+    {
+      "@id": "ex:SETTING_3_401",
+      "@type": "lbco:temperature",
+      "rdfs:comment": "Value and unit: 25 degree Celsius",
+      "hasQualityMeasurement": {
+        "@type": "QualityMeasurement",
+        "unitMeasure": "http://qudt.org/vocab/unit/DEG_C",
+        "isMeasurementOf": "ex:temperatureC",
+        "value": 25
+      }
+    },
+    {
+      "@id": "ex:SETTING_4_401",
+      "@type": "lbco:charging_current",
+      "rdfs:comment": "Value and unit: 2.08E-04 A (0.000208A)",
+      "hasQualityMeasurement": {
+        "@type": "QualityMeasurement",
+        "unitMeasure": "http://qudt.org/vocab/unit/MicroA",
+        "isMeasurementOf": "ex:electricIntensity",
+        "value": 0.000208
+      }
+    },
+    {
+      "@id": "ex:IFPEN_LIB_AGT_25_1312",
+      "@type": "lbco:separator",
+      "rdfs:comment": "three-layer PP/PE/PP structure",
+      "lbco:has_property": [
+        "ex:PROPERTY_5_401",
+        "ex:PROPERTY_6_401"
+      ]
+    },
+    {
+      "@id": "ex:IFPEN_LIB_CEL_26_401",
+      "@type": "lbco:full_cell",
+      "lbco:has_ID": "CEL-26-401",
+      "lbco:has_property": [
+        "ex:PROPERTY_C1_401",
+        "ex:PROPERTY_C2_401",
+        "ex:PROPERTY_C3_401"
+      ]
+    },
+    {
+      "@id": "ex:IFPEN_LIB_ELO_26_197",
+      "@type": "lbco:positive_electrode",
+      "lbco:has_property": [
+        {
+          "@id": "ex:PROPERTY_1_401",
+          "@type": "lbco:electrode_porosity"
+        },
+        {
+          "@id": "ex:PROPERTY_2_401",
+          "@type": "lbco:electrode_surface_area"
+        }
+      ]
+    },
+    {
+      "@id": "ex:IFPEN_LIB_ELO_26_199",
+      "@type": "lbco:negative_electrode",
+      "lbco:has_ID": "CEL-26-199",
+      "lbco:has_property": [
+        "ex:PROPERTY_3_401",
+        "ex:PROPERTY_4_401"
+      ]
+    },
+    {
+      "@id": "ex:IFPEN_LIB_PRC_25_321",
+      "@type": "lbco:electrolyte"
+    },
+    {
+      "@id": "ex:IFPEN_LIB_PRF_26_416",
+      "@type": "lbco:characterization_process",
+      "lbco:has_participant": [
+        {
+          "@id": "ex:HUMAN_1",
+          "@type": "lbco:human_agent"
+        },
+        {
+          "@id": "ex:IFPEN_LIB_CEL_26_401",
+          "@type": "lbco:full_cell"
+        }
+      ]
+    },
+    {
+      "@id": "ex:IPFEN_PRP_26_1511",
+      "@type": "lbco:assemblying",
+      "lbco:has_ID": "PRP-26-1509",
+      "lbco:has_input": [
+        {
+          "@id": "ex:IFPEN_LIB_ELO_26_199",
+          "@type": "lbco:negative_electrode"
+        },
+        {
+          "@id": "ex:IFPEN_LIB_AGT_25_1312",
+          "@type": "lbco:separator"
+        },
+        {
+          "@id": "ex:IFPEN_LIB_PRC_25_321",
+          "@type": "lbco:negative_electrode"
+        },
+        {
+          "@id": "ex:IFPEN_LIB_CEL_26_401",
+          "@type": "lbco:negative_electrode"
+        },
+        {
+          "@id": "ex:IFPEN_LIB_ELO_26_197",
+          "@type": "lbco:positive_electrode",
+          "lbco:has_property": [
+            {
+              "@id": "ex:PROPERTY_1_401",
+              "@type": "lbco:electrode_porosity"
+            },
+            {
+              "@id": "ex:PROPERTY_2_401",
+              "@type": "lbco:electrode_surface_area"
+            }
+          ]
+        },
+        {
+          "@id": "ex:IFPEN_LIB_PRC_25_321",
+          "@type": "lbco:electrolyte"
+        }
+      ],
+      "lbco:has_output": {
+        "@id": "ex:IFPEN_LIB_CEL_26_401",
+        "@type": "lbco:full_cell"
+      },
+      "lbco:has_setting": {
+        "@id": "ex:SETTING_1_401"
+      }
+    },
+    {
+      "@id": "ex:HUMAN_1",
+      "@type": "lbco:human_agent",
+      "lbco:has_ID": "girodn"
+    },
+    {
+      "@id": "ex:IFPEN_LIB_FORMING_MA_26_1563",
+      "@type": "lbco:forming",
+      "lbco:has_ID": "MA-26-1563",
+      "lbco:has_input": "ex:IFPEN_LIB_CEL_26_404",
+      "lbco:has_output": "ex:IFPEN_LIB_CEL_26_404",
+      "lbco:has_participant": "ex:HUMAN_1",
+      "lbco:has_setting": "ex:SETTING_4_401"
+    },
+    {
+      "@id": "PROPERTY_C1_402",
+      "@type": "lbco:full_cell_capacity",
+      "hasQualityMeasurement": {
+        "@type": "QualityMeasurement",
+        "unitMeasure": "http://qudt.org/vocab/unit/MilliA-HR",
+        "isMeasurementOf": "ex:charge",
+        "value": 2.09
+      },
+      "computedOn":"1ca048ae6ecefea1c76bfc881c002a1f"
+    },
+    {
+      "@id": "PROPERTY_C2_402",
+      "@type": "lbco:cell_minimum_voltage",
+      "hasQualityMeasurement": {
+        "@type": "QualityMeasurement",
+        "unitMeasure": "http://qudt.org/vocab/unit/V",
+        "isMeasurementOf": "ex:voltage",
+        "value": 3.8
+      }
+    },
+    {
+      "@id": "PROPERTY_C3_402",
+      "@type": "lbco:full_cell_capacity",
+      "hasQualityMeasurement": {
+        "@type": "QualityMeasurement",
+        "unitMeasure": "http://qudt.org/vocab/unit/V",
+        "isMeasurementOf": "ex:voltage",
+        "value": 4.2
+      }
+    },
+    {
+      "@id": "ex:PROPERTY_1_402",
+      "@type": "lbco:electrode_porosity",
+      "rdfs:comment": "Value and unit: 40 %",
+      "hasQualityMeasurement": {
+        "@type": "QualityMeasurement",
+        "isMeasurementOf": "ex:ratio",
+        "value": 0.41
+      }
+    },
+    {
+      "@id": "ex:PROPERTY_2_402",
+      "@type": "lbco:electrode_surface_area",
+      "rdfs:comment": "Value and unit: 1.131 cm^2",
+      "hasQualityMeasurement": {
+        "@type": "QualityMeasurement",
+        "unitMeasure": "http://qudt.org/vocab/unit/CentiM2",
+        "isMeasurementOf": "ex:surface_area",
+        "value": 1.131
+      }
+    },
+    {
+      "@id": "PROPERTY_3_402",
+      "@type": "lbco:electrode_porosity",
+      "hasQualityMeasurement": {
+        "@type": "QualityMeasurement",
+        "isMeasurementOf": "ex:ratio",
+        "value": 0.31
+      }
+    },
+    {
+      "@id": "PROPERTY_4_402",
+      "@type": "lbco:electrode_surface_area",
+      "hasQualityMeasurement": {
+        "@type": "QualityMeasurement",
+        "unitMeasure": "http://qudt.org/vocab/unit/CentiM2",
+        "isMeasurementOf": "ex:surface_area",
+        "value": 1.539
+      }
+    },
+    {
+      "@id": "PROPERTY_5_402",
+      "@type": "lbco:separator_porosity",
+      "hasQualityMeasurement": {
+        "@type": "QualityMeasurement",
+        "isMeasurementOf": "ex:ratio",
+        "value": 0.44
+      }
+    },
+    {
+      "@id": "PROPERTY_6_402",
+      "@type": "lbco:separator_thickness",
+      "hasQualityMeasurement": {
+        "@type": "QualityMeasurement",
+        "unitMeasure": "http://qudt.org/vocab/unit/MicroM",
+        "isMeasurementOf": "ex:count",
+        "value": 20
+      }
+    },
+    {
+      "@id": "PROPERTY_7_402",
+      "@type": "lbco:electrolyte_composition",
+      "hasQualityMeasurement": {
+        "@type": "QualityMeasurement",
+        "unitMeasure": "http://qudt.org/vocab/unit/MicroM",
+        "isMeasurementOf": "ex:surface_area",
+        "value": 25
+      }
+    },
+    {
+      "@id": "ex:SETTING_1_402",
+      "@type": "lbco:number_of_spacers",
+      "rdfs:comment": "Value and unit: 3 units",
+      "hasQualityMeasurement": {
+        "@type": "QualityMeasurement",
+        "isMeasurementOf": "ex:count",
+        "value": 3
+      }
+    },
+    {
+      "@id": "ex:SETTING_2_402",
+      "@type": "lbco:electrolyte_volume",
+      "unitMeasure": "http://qudt.org/vocab/unit/MicroL",
+      "rdfs:comment": "Value and unit: 100 microliters",
+      "hasQualityMeasurement": {
+        "@type": "QualityMeasurement",
+        "isMeasurementOf": "ex:volume",
+        "value": 100
+      }
+    },
+    {
+      "@id": "ex:SETTING_3_402",
+      "@type": "lbco:temperature",
+      "rdfs:comment": "Value and unit: 25 degree Celsius",
+      "hasQualityMeasurement": {
+        "@type": "QualityMeasurement",
+        "unitMeasure": "http://qudt.org/vocab/unit/DEG_C",
+        "isMeasurementOf": "ex:temperatureC",
+        "value": 25
+      }
+    },
+    {
+      "@id": "ex:SETTING_4_402",
+      "@type": "lbco:charging_current",
+      "rdfs:comment": "Value and unit: 2.08E-04 A (0.000208A)",
+      "hasQualityMeasurement": {
+        "@type": "QualityMeasurement",
+        "unitMeasure": "http://qudt.org/vocab/unit/MicroA",
+        "isMeasurementOf": "ex:electricIntensity",
+        "value": 0.000208
+      }
+    },
+    {
+      "@id": "ex:IFPEN_LIB_AGT_24_10377",
+      "@type": "lbco:separator",
+      "rdfs:comment": "three-layer PP/PE/PP structure",
+      "lbco:has_property": [
+        "ex:PROPERTY_5_402",
+        "ex:PROPERTY_6_402"
+      ]
+    },
+    {
+      "@id": "ex:IFPEN_LIB_CEL_26_402",
+      "@type": "lbco:full_cell",
+      "lbco:has_ID": "CEL-26-402",
+      "lbco:has_property": [
+        "ex:PROPERTY_C1_402",
+        "ex:PROPERTY_C2_402",
+        "ex:PROPERTY_C3_402"
+      ]
+    },
+    {
+      "@id": "ex:IFPEN_LIB_ELO_26_198",
+      "@type": "lbco:positive_electrode",
+      "lbco:has_property": [
+        {
+          "@id": "ex:PROPERTY_1_402",
+          "@type": "lbco:electrode_porosity"
+        },
+        {
+          "@id": "ex:PROPERTY_2_402",
+          "@type": "lbco:electrode_surface_area"
+        }
+      ]
+    },
+    {
+      "@id": "ex:IFPEN_LIB_ELO_26_200",
+      "@type": "lbco:negative_electrode",
+      "lbco:has_ID": "CEL-26-200",
+      "lbco:has_property": [
+        "ex:PROPERTY_3_402",
+        "ex:PROPERTY_4_402"
+      ]
+    },
+    {
+      "@id": "ex:IFPEN_LIB_PRC_25_321",
+      "@type": "lbco:electrolyte"
+    },
+    {
+      "@id": "ex:IFPEN_LIB_PRF_26_414",
+      "@type": "lbco:characterization_process",
+      "lbco:has_participant": [
+        {
+          "@id": "ex:HUMAN_1",
+          "@type": "lbco:human_agent"
+        },
+        {
+          "@id": "ex:IFPEN_LIB_CEL_26_402",
+          "@type": "lbco:full_cell"
+        }
+      ]
+    },
+    {
+      "@id": "ex:IPFEN_PRP_26_1512",
+      "@type": "lbco:assemblying",
+      "lbco:has_ID": "PRP-26-1512",
+      "lbco:has_input": [
+        {
+          "@id": "ex:IFPEN_LIB_ELO_26_200",
+          "@type": "lbco:negative_electrode"
+        },
+        {
+          "@id": "ex:IFPEN_LIB_AGT-24-10377",
+          "@type": "lbco:separator"
+        },
+        {
+          "@id": "ex:IFPEN_LIB_PRC_25_321",
+          "@type": "lbco:negative_electrode"
+        },
+        {
+          "@id": "ex:IFPEN_LIB_CEL_26_402",
+          "@type": "lbco:negative_electrode"
+        },
+        {
+          "@id": "ex:IFPEN_LIB_ELO_26_198",
+          "@type": "lbco:positive_electrode",
+          "lbco:has_property": [
+            {
+              "@id": "ex:PROPERTY_1_402",
+              "@type": "lbco:electrode_porosity"
+            },
+            {
+              "@id": "ex:PROPERTY_2_402",
+              "@type": "lbco:electrode_surface_area"
+            }
+          ]
+        },
+        {
+          "@id": "ex:IFPEN_LIB_PRC_25_321",
+          "@type": "lbco:electrolyte"
+        }
+      ],
+      "lbco:has_output": {
+        "@id": "ex:IFPEN_LIB_CEL_26_402",
+        "@type": "lbco:full_cell"
+      },
+      "lbco:has_setting": {
+        "@id": "ex:SETTING_1_402"
+      }
+    },
+    {
+      "@id": "ex:HUMAN_1",
+      "@type": "lbco:human_agent",
+      "lbco:has_ID": "girodn"
+    },
+    {
+      "@id": "ex:IFPEN_LIB_FORMING_MA_26_1563",
+      "@type": "lbco:forming",
+      "lbco:has_ID": "MA-26-1563",
+      "lbco:has_input": "ex:IFPEN_LIB_CEL_26_404",
+      "lbco:has_output": "ex:IFPEN_LIB_CEL_26_404",
+      "lbco:has_participant": "ex:HUMAN_1",
+      "lbco:has_setting": "ex:SETTING_4_402"
+    }
+  ]
+}
