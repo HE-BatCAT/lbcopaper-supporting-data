@@ -1,0 +1,563 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dqv: <http://www.w3.org/ns/dqv#> .
+@prefix ex: <https://w3id.org/batcat/scenarios/lib_cell_example#> .
+@prefix lbco: <https://w3id.org/batcat#> .
+@prefix ns1: <https://www.w3.org/TR/vocab-dqv/#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sdmxa: <http://purl.org/linked-data/sdmx/2009/attribute#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xs: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://issemantic.net/PROPERTY_3_399> a lbco:electrode_porosity ;
+    dqv:hasQualityMeasurement [ a dqv:QualityMeasurement ;
+            dqv:isMeasurementOf "ex:ratio" ;
+            dqv:value 3.1e-01 ] .
+
+<http://issemantic.net/PROPERTY_3_400> a lbco:electrode_porosity ;
+    dqv:hasQualityMeasurement [ a dqv:QualityMeasurement ;
+            dqv:isMeasurementOf "ex:ratio" ;
+            dqv:value 3.1e-01 ] .
+
+<http://issemantic.net/PROPERTY_3_401> a lbco:electrode_porosity ;
+    dqv:hasQualityMeasurement [ a dqv:QualityMeasurement ;
+            dqv:isMeasurementOf "ex:ratio" ;
+            dqv:value 3.1e-01 ] .
+
+<http://issemantic.net/PROPERTY_3_402> a lbco:electrode_porosity ;
+    dqv:hasQualityMeasurement [ a dqv:QualityMeasurement ;
+            dqv:isMeasurementOf "ex:ratio" ;
+            dqv:value 3.1e-01 ] .
+
+<http://issemantic.net/PROPERTY_4_399> a lbco:electrode_surface_area ;
+    dqv:hasQualityMeasurement [ a dqv:QualityMeasurement ;
+            sdmxa:unitMeasure <http://qudt.org/vocab/unit/CentiM2> ;
+            dqv:isMeasurementOf "ex:surface_area" ;
+            dqv:value 1.539e+00 ] .
+
+<http://issemantic.net/PROPERTY_4_400> a lbco:electrode_surface_area ;
+    dqv:hasQualityMeasurement [ a dqv:QualityMeasurement ;
+            sdmxa:unitMeasure <http://qudt.org/vocab/unit/CentiM2> ;
+            dqv:isMeasurementOf "ex:surface_area" ;
+            dqv:value 1.539e+00 ] .
+
+<http://issemantic.net/PROPERTY_4_401> a lbco:electrode_surface_area ;
+    dqv:hasQualityMeasurement [ a dqv:QualityMeasurement ;
+            sdmxa:unitMeasure <http://qudt.org/vocab/unit/CentiM2> ;
+            dqv:isMeasurementOf "ex:surface_area" ;
+            dqv:value 1.539e+00 ] .
+
+<http://issemantic.net/PROPERTY_4_402> a lbco:electrode_surface_area ;
+    dqv:hasQualityMeasurement [ a dqv:QualityMeasurement ;
+            sdmxa:unitMeasure <http://qudt.org/vocab/unit/CentiM2> ;
+            dqv:isMeasurementOf "ex:surface_area" ;
+            dqv:value 1.539e+00 ] .
+
+<http://issemantic.net/PROPERTY_5_399> a lbco:separator_porosity ;
+    dqv:hasQualityMeasurement [ a dqv:QualityMeasurement ;
+            dqv:isMeasurementOf "ex:ratio" ;
+            dqv:value 3.9e-01 ] .
+
+<http://issemantic.net/PROPERTY_5_400> a lbco:separator_porosity ;
+    dqv:hasQualityMeasurement [ a dqv:QualityMeasurement ;
+            dqv:isMeasurementOf "ex:ratio" ;
+            dqv:value 4.4e-01 ] .
+
+<http://issemantic.net/PROPERTY_5_401> a lbco:separator_porosity ;
+    dqv:hasQualityMeasurement [ a dqv:QualityMeasurement ;
+            dqv:isMeasurementOf "ex:ratio" ;
+            dqv:value 3.9e-01 ] .
+
+<http://issemantic.net/PROPERTY_5_402> a lbco:separator_porosity ;
+    dqv:hasQualityMeasurement [ a dqv:QualityMeasurement ;
+            dqv:isMeasurementOf "ex:ratio" ;
+            dqv:value 4.4e-01 ] .
+
+<http://issemantic.net/PROPERTY_6_399> a lbco:separator_thickness ;
+    dqv:hasQualityMeasurement [ a dqv:QualityMeasurement ;
+            sdmxa:unitMeasure <http://qudt.org/vocab/unit/MicroM> ;
+            dqv:isMeasurementOf "ex:count" ;
+            dqv:value 25 ] .
+
+<http://issemantic.net/PROPERTY_6_400> a lbco:separator_thickness ;
+    dqv:hasQualityMeasurement [ a dqv:QualityMeasurement ;
+            sdmxa:unitMeasure <http://qudt.org/vocab/unit/MicroM> ;
+            dqv:isMeasurementOf "ex:count" ;
+            dqv:value 20 ] .
+
+<http://issemantic.net/PROPERTY_6_401> a lbco:separator_thickness ;
+    dqv:hasQualityMeasurement [ a dqv:QualityMeasurement ;
+            sdmxa:unitMeasure <http://qudt.org/vocab/unit/MicroM> ;
+            dqv:isMeasurementOf "ex:count" ;
+            dqv:value 25 ] .
+
+<http://issemantic.net/PROPERTY_6_402> a lbco:separator_thickness ;
+    dqv:hasQualityMeasurement [ a dqv:QualityMeasurement ;
+            sdmxa:unitMeasure <http://qudt.org/vocab/unit/MicroM> ;
+            dqv:isMeasurementOf "ex:count" ;
+            dqv:value 20 ] .
+
+<http://issemantic.net/PROPERTY_7_399> a lbco:electrolyte_composition ;
+    dqv:hasQualityMeasurement [ a dqv:QualityMeasurement ;
+            sdmxa:unitMeasure <http://qudt.org/vocab/unit/MicroM> ;
+            dqv:isMeasurementOf "ex:surface_area" ;
+            dqv:value 25 ] .
+
+<http://issemantic.net/PROPERTY_7_400> a lbco:electrolyte_composition ;
+    dqv:hasQualityMeasurement [ a dqv:QualityMeasurement ;
+            sdmxa:unitMeasure <http://qudt.org/vocab/unit/MicroM> ;
+            dqv:isMeasurementOf "ex:surface_area" ;
+            dqv:value 25 ] .
+
+<http://issemantic.net/PROPERTY_7_401> a lbco:electrolyte_composition ;
+    dqv:hasQualityMeasurement [ a dqv:QualityMeasurement ;
+            sdmxa:unitMeasure <http://qudt.org/vocab/unit/MicroM> ;
+            dqv:isMeasurementOf "ex:surface_area" ;
+            dqv:value 25 ] .
+
+<http://issemantic.net/PROPERTY_7_402> a lbco:electrolyte_composition ;
+    dqv:hasQualityMeasurement [ a dqv:QualityMeasurement ;
+            sdmxa:unitMeasure <http://qudt.org/vocab/unit/MicroM> ;
+            dqv:isMeasurementOf "ex:surface_area" ;
+            dqv:value 25 ] .
+
+<http://issemantic.net/PROPERTY_C1_399> a lbco:full_cell_capacity ;
+    dqv:hasQualityMeasurement [ a dqv:QualityMeasurement ;
+            sdmxa:unitMeasure <http://qudt.org/vocab/unit/MilliA-HR> ;
+            dqv:isMeasurementOf "ex:charge" ;
+            dqv:value 2.28e+00 ] ;
+    ns1:dqv:computedOn <http://issemantic.net/9f9b19f495b1d64e2a576ff09217157b> .
+
+<http://issemantic.net/PROPERTY_C1_400> a lbco:full_cell_capacity ;
+    dqv:hasQualityMeasurement [ a dqv:QualityMeasurement ;
+            sdmxa:unitMeasure <http://qudt.org/vocab/unit/MilliA-HR> ;
+            dqv:isMeasurementOf "ex:charge" ;
+            dqv:value 2.28e+00 ] ;
+    ns1:dqv:computedOn <http://issemantic.net/d968526b1b31c7a1157b20cd82c97481> .
+
+<http://issemantic.net/PROPERTY_C1_401> a lbco:full_cell_capacity ;
+    dqv:hasQualityMeasurement [ a dqv:QualityMeasurement ;
+            sdmxa:unitMeasure <http://qudt.org/vocab/unit/MilliA-HR> ;
+            dqv:isMeasurementOf "ex:charge" ;
+            dqv:value 2.09e+00 ] ;
+    ns1:dqv:computedOn <http://issemantic.net/d395b76b826f7e390ca0f67c0f81d798> .
+
+<http://issemantic.net/PROPERTY_C1_402> a lbco:full_cell_capacity ;
+    dqv:hasQualityMeasurement [ a dqv:QualityMeasurement ;
+            sdmxa:unitMeasure <http://qudt.org/vocab/unit/MilliA-HR> ;
+            dqv:isMeasurementOf "ex:charge" ;
+            dqv:value 2.09e+00 ] ;
+    ns1:dqv:computedOn <http://issemantic.net/1ca048ae6ecefea1c76bfc881c002a1f> .
+
+<http://issemantic.net/PROPERTY_C2_399> a lbco:cell_minimum_voltage ;
+    dqv:hasQualityMeasurement [ a dqv:QualityMeasurement ;
+            sdmxa:unitMeasure <http://qudt.org/vocab/unit/V> ;
+            dqv:isMeasurementOf "ex:voltage" ;
+            dqv:value 2.5e+00 ] .
+
+<http://issemantic.net/PROPERTY_C2_400> a lbco:cell_minimum_voltage ;
+    dqv:hasQualityMeasurement [ a dqv:QualityMeasurement ;
+            sdmxa:unitMeasure <http://qudt.org/vocab/unit/V> ;
+            dqv:isMeasurementOf "ex:voltage" ;
+            dqv:value 2.5e+00 ] .
+
+<http://issemantic.net/PROPERTY_C2_401> a lbco:cell_minimum_voltage ;
+    dqv:hasQualityMeasurement [ a dqv:QualityMeasurement ;
+            sdmxa:unitMeasure <http://qudt.org/vocab/unit/V> ;
+            dqv:isMeasurementOf "ex:voltage" ;
+            dqv:value 3.8e+00 ] .
+
+<http://issemantic.net/PROPERTY_C2_402> a lbco:cell_minimum_voltage ;
+    dqv:hasQualityMeasurement [ a dqv:QualityMeasurement ;
+            sdmxa:unitMeasure <http://qudt.org/vocab/unit/V> ;
+            dqv:isMeasurementOf "ex:voltage" ;
+            dqv:value 3.8e+00 ] .
+
+<http://issemantic.net/PROPERTY_C3_399> a lbco:full_cell_capacity ;
+    dqv:hasQualityMeasurement [ a dqv:QualityMeasurement ;
+            sdmxa:unitMeasure <http://qudt.org/vocab/unit/V> ;
+            dqv:isMeasurementOf "ex:voltage" ;
+            dqv:value 4.2e+00 ] .
+
+<http://issemantic.net/PROPERTY_C3_400> a lbco:full_cell_capacity ;
+    dqv:hasQualityMeasurement [ a dqv:QualityMeasurement ;
+            sdmxa:unitMeasure <http://qudt.org/vocab/unit/V> ;
+            dqv:isMeasurementOf "ex:voltage" ;
+            dqv:value 4.2e+00 ] .
+
+<http://issemantic.net/PROPERTY_C3_401> a lbco:full_cell_capacity ;
+    dqv:hasQualityMeasurement [ a dqv:QualityMeasurement ;
+            sdmxa:unitMeasure <http://qudt.org/vocab/unit/V> ;
+            dqv:isMeasurementOf "ex:voltage" ;
+            dqv:value 4.2e+00 ] .
+
+<http://issemantic.net/PROPERTY_C3_402> a lbco:full_cell_capacity ;
+    dqv:hasQualityMeasurement [ a dqv:QualityMeasurement ;
+            sdmxa:unitMeasure <http://qudt.org/vocab/unit/V> ;
+            dqv:isMeasurementOf "ex:voltage" ;
+            dqv:value 4.2e+00 ] .
+
+ex:IFPEN_LIB_AGT_24_10377 a lbco:separator ;
+    rdfs:comment "three-layer PP/PE/PP structure" ;
+    lbco:has_property "ex:PROPERTY_5_402",
+        "ex:PROPERTY_6_402" .
+
+ex:IFPEN_LIB_ELO_26_194 a lbco:positive_electrode ;
+    lbco:has_property ex:PROPERTY_1_400,
+        ex:PROPERTY_2_400 .
+
+ex:IFPEN_LIB_FORMING_MA_26_1563 a lbco:forming ;
+    lbco:has_ID "MA-26-1563" ;
+    lbco:has_input "ex:IFPEN_LIB_CEL_26_404" ;
+    lbco:has_output "ex:IFPEN_LIB_CEL_26_404" ;
+    lbco:has_participant "ex:HUMAN_1" ;
+    lbco:has_setting "ex:SETTING_4_399",
+        "ex:SETTING_4_400",
+        "ex:SETTING_4_401",
+        "ex:SETTING_4_402" .
+
+ex:IFPEN_LIB_PRF_26_414 a lbco:characterization_process ;
+    lbco:has_participant ex:HUMAN_1,
+        ex:IFPEN_LIB_CEL_26_399,
+        ex:IFPEN_LIB_CEL_26_402 .
+
+ex:IFPEN_LIB_PRF_26_415 a lbco:characterization_process ;
+    lbco:has_participant ex:HUMAN_1,
+        ex:IFPEN_LIB_CEL_26_400 .
+
+ex:IFPEN_LIB_PRF_26_416 a lbco:characterization_process ;
+    lbco:has_participant ex:HUMAN_1,
+        ex:IFPEN_LIB_CEL_26_401 .
+
+ex:IPFEN_PRP_26_1509 a lbco:assemblying ;
+    lbco:has_ID "PRP-26-1509" ;
+    lbco:has_input ex:IFPEN_LIB_AGT_25_1312,
+        ex:IFPEN_LIB_CEL_26_399,
+        ex:IFPEN_LIB_ELO_26_193,
+        ex:IFPEN_LIB_ELO_26_195,
+        ex:IFPEN_LIB_PRC_25_321 ;
+    lbco:has_output ex:IFPEN_LIB_CEL_26_399 ;
+    lbco:has_setting ex:SETTING_1_399 .
+
+ex:IPFEN_PRP_26_1511 a lbco:assemblying ;
+    lbco:has_ID "PRP-26-1509",
+        "PRP-26-1511" ;
+    lbco:has_input ex:IFPEN_LIB_AGT-25-1312,
+        ex:IFPEN_LIB_AGT_25_1312,
+        ex:IFPEN_LIB_CEL_26_400,
+        ex:IFPEN_LIB_CEL_26_401,
+        ex:IFPEN_LIB_ELO_26_197,
+        ex:IFPEN_LIB_ELO_26_199,
+        ex:IFPEN_LIB_ELO_26_400,
+        ex:IFPEN_LIB_PRC_25_321 ;
+    lbco:has_output ex:IFPEN_LIB_CEL_26_400,
+        ex:IFPEN_LIB_CEL_26_401 ;
+    lbco:has_setting ex:SETTING_1_400,
+        ex:SETTING_1_401 .
+
+ex:IPFEN_PRP_26_1512 a lbco:assemblying ;
+    lbco:has_ID "PRP-26-1512" ;
+    lbco:has_input ex:IFPEN_LIB_AGT-24-10377,
+        ex:IFPEN_LIB_CEL_26_402,
+        ex:IFPEN_LIB_ELO_26_198,
+        ex:IFPEN_LIB_ELO_26_200,
+        ex:IFPEN_LIB_PRC_25_321 ;
+    lbco:has_output ex:IFPEN_LIB_CEL_26_402 ;
+    lbco:has_setting ex:SETTING_1_402 .
+
+ex:SETTING_2_399 a lbco:electrolyte_volume ;
+    sdmxa:unitMeasure <http://qudt.org/vocab/unit/MicroL> ;
+    rdfs:comment "Value and unit: 100 microliters" ;
+    dqv:hasQualityMeasurement [ a dqv:QualityMeasurement ;
+            dqv:isMeasurementOf "ex:volume" ;
+            dqv:value 100 ] .
+
+ex:SETTING_2_400 a lbco:electrolyte_volume ;
+    sdmxa:unitMeasure <http://qudt.org/vocab/unit/MicroL> ;
+    rdfs:comment "Value and unit: 100 microliters" ;
+    dqv:hasQualityMeasurement [ a dqv:QualityMeasurement ;
+            dqv:isMeasurementOf "ex:volume" ;
+            dqv:value 100 ] .
+
+ex:SETTING_2_401 a lbco:electrolyte_volume ;
+    sdmxa:unitMeasure <http://qudt.org/vocab/unit/MicroL> ;
+    rdfs:comment "Value and unit: 100 microliters" ;
+    dqv:hasQualityMeasurement [ a dqv:QualityMeasurement ;
+            dqv:isMeasurementOf "ex:volume" ;
+            dqv:value 100 ] .
+
+ex:SETTING_2_402 a lbco:electrolyte_volume ;
+    sdmxa:unitMeasure <http://qudt.org/vocab/unit/MicroL> ;
+    rdfs:comment "Value and unit: 100 microliters" ;
+    dqv:hasQualityMeasurement [ a dqv:QualityMeasurement ;
+            dqv:isMeasurementOf "ex:volume" ;
+            dqv:value 100 ] .
+
+ex:SETTING_3_399 a lbco:temperature ;
+    rdfs:comment "Value and unit: 25 degree Celsius" ;
+    dqv:hasQualityMeasurement [ a dqv:QualityMeasurement ;
+            sdmxa:unitMeasure <http://qudt.org/vocab/unit/DEG_C> ;
+            dqv:isMeasurementOf "ex:temperatureC" ;
+            dqv:value 25 ] .
+
+ex:SETTING_3_400 a lbco:temperature ;
+    rdfs:comment "Value and unit: 25 degree Celsius" ;
+    dqv:hasQualityMeasurement [ a dqv:QualityMeasurement ;
+            sdmxa:unitMeasure <http://qudt.org/vocab/unit/DEG_C> ;
+            dqv:isMeasurementOf "ex:temperatureC" ;
+            dqv:value 25 ] .
+
+ex:SETTING_3_401 a lbco:temperature ;
+    rdfs:comment "Value and unit: 25 degree Celsius" ;
+    dqv:hasQualityMeasurement [ a dqv:QualityMeasurement ;
+            sdmxa:unitMeasure <http://qudt.org/vocab/unit/DEG_C> ;
+            dqv:isMeasurementOf "ex:temperatureC" ;
+            dqv:value 25 ] .
+
+ex:SETTING_3_402 a lbco:temperature ;
+    rdfs:comment "Value and unit: 25 degree Celsius" ;
+    dqv:hasQualityMeasurement [ a dqv:QualityMeasurement ;
+            sdmxa:unitMeasure <http://qudt.org/vocab/unit/DEG_C> ;
+            dqv:isMeasurementOf "ex:temperatureC" ;
+            dqv:value 25 ] .
+
+ex:SETTING_4 a lbco:charging_current ;
+    rdfs:comment "Value and unit: 2.08E-04 A (0.000208A)" ;
+    dqv:hasQualityMeasurement [ a dqv:QualityMeasurement ;
+            sdmxa:unitMeasure <http://qudt.org/vocab/unit/MicroA> ;
+            dqv:isMeasurementOf "ex:electricIntensity" ;
+            dqv:value 2.08e-04 ] .
+
+ex:SETTING_4_400 a lbco:charging_current ;
+    rdfs:comment "Value and unit: 2.08E-04 A (0.000208A)" ;
+    dqv:hasQualityMeasurement [ a dqv:QualityMeasurement ;
+            sdmxa:unitMeasure <http://qudt.org/vocab/unit/MicroA> ;
+            dqv:isMeasurementOf "ex:electricIntensity" ;
+            dqv:value 2.08e-04 ] .
+
+ex:SETTING_4_401 a lbco:charging_current ;
+    rdfs:comment "Value and unit: 2.08E-04 A (0.000208A)" ;
+    dqv:hasQualityMeasurement [ a dqv:QualityMeasurement ;
+            sdmxa:unitMeasure <http://qudt.org/vocab/unit/MicroA> ;
+            dqv:isMeasurementOf "ex:electricIntensity" ;
+            dqv:value 2.08e-04 ] .
+
+ex:SETTING_4_402 a lbco:charging_current ;
+    rdfs:comment "Value and unit: 2.08E-04 A (0.000208A)" ;
+    dqv:hasQualityMeasurement [ a dqv:QualityMeasurement ;
+            sdmxa:unitMeasure <http://qudt.org/vocab/unit/MicroA> ;
+            dqv:isMeasurementOf "ex:electricIntensity" ;
+            dqv:value 2.08e-04 ] .
+
+ex:charge a dqv:Metric ;
+    skos:definition "mA-hour" ;
+    dqv:expectedDataType "xsd:double" ;
+    dqv:inDimension "dqv:precision" .
+
+ex:count a dqv:Metric ;
+    skos:definition "number of items" ;
+    dqv:expectedDataType "xsd:integer" .
+
+ex:electricIntensity a dqv:Metric ;
+    skos:definition "Amperage" ;
+    dqv:expectedDataType "xsd:double" ;
+    dqv:inDimension "dqv:precision" .
+
+ex:ratio a dqv:Metric ;
+    skos:definition "0.0 to 1.00 ratio" ;
+    dqv:expectedDataType "xsd:double" ;
+    dqv:inDimension "dqv:completeness" .
+
+ex:surface_area a dqv:Metric ;
+    skos:definition "Spatial resolution of a dataset expressed as distance" ;
+    dqv:expectedDataType "xsd:integer" ;
+    dqv:inDimension "dqv:precision" .
+
+ex:temperatureC a dqv:Metric ;
+    skos:definition "Temperature in Celsius" ;
+    dqv:expectedDataType "xsd:double" ;
+    dqv:inDimension "dqv:precision" .
+
+ex:voltage a dqv:Metric ;
+    skos:definition "Electric potential" ;
+    dqv:expectedDataType "xsd:double" ;
+    dqv:inDimension "dqv:precision" .
+
+ex:volume a dqv:Metric ;
+    skos:definition "Volume in litres" ;
+    dqv:expectedDataType "xsd:double" ;
+    dqv:inDimension "dqv:precision" .
+
+<https://w3id.org/batcat/scenarios/optimization_example> dcterms:contributor "Daniele Toti (ORCID 0000-0002-9668-6961)",
+        "Gerhard Goldbeck (ORCID 0000-0002-4181-2852)",
+        "Martin T. Horsch (ORCID 0000-0002-9464-6739)" ;
+    dcterms:creator "Martin Petit (ORCID 0000-0002-4226-6689)",
+        "Noel Vizcaino (ORCID 0000-0001-7608-9484)",
+        "Silvia Chiacchiera (ORCID 0000-0003-0422-7870)" ;
+    dcterms:license "https://www.gnu.org/licenses/lgpl-3.0.en.html" ;
+    dcterms:modified "2026-11-04" ;
+    dcterms:title "BatCAT core ontologies: LIB cell example" ;
+    rdfs:comment """The authors acknowledge funding from the European Union's Horizon Europe research and
+innovation programme under grant agreement no. 101137725, Battery Cell Assembly Twin (BatCAT).""";
+    owl:imports <https://w3id.org/batcat/battery>,
+        <https://w3id.org/batcat/characterization>,
+        <https://w3id.org/batcat/higher>,
+        <https://w3id.org/batcat/manufacturing> ;
+    owl:versionInfo "version 0.1.0" .
+
+ex:IFPEN_LIB_AGT-24-10377 a lbco:separator ;
+    rdfs:comment "three-layer PP/PE/PP structure" ;
+    lbco:has_property "ex:PROPERTY_5_400",
+        "ex:PROPERTY_6_400" .
+
+ex:IFPEN_LIB_AGT-25-1312 a lbco:separator .
+
+ex:IFPEN_LIB_ELO_26_193 a lbco:positive_electrode ;
+    lbco:has_property ex:PROPERTY_1_399,
+        ex:PROPERTY_2_399 .
+
+ex:IFPEN_LIB_ELO_26_195 a lbco:negative_electrode ;
+    lbco:has_ID "CEL-26-195" ;
+    lbco:has_property "ex:PROPERTY_3_399",
+        "ex:PROPERTY_3_400",
+        "ex:PROPERTY_4_399",
+        "ex:PROPERTY_4_400" .
+
+ex:IFPEN_LIB_ELO_26_197 a lbco:positive_electrode ;
+    lbco:has_property ex:PROPERTY_1_401,
+        ex:PROPERTY_2_401 .
+
+ex:IFPEN_LIB_ELO_26_198 a lbco:positive_electrode ;
+    lbco:has_property ex:PROPERTY_1_402,
+        ex:PROPERTY_2_402 .
+
+ex:IFPEN_LIB_ELO_26_199 a lbco:negative_electrode ;
+    lbco:has_ID "CEL-26-199" ;
+    lbco:has_property "ex:PROPERTY_3_401",
+        "ex:PROPERTY_4_401" .
+
+ex:IFPEN_LIB_ELO_26_200 a lbco:negative_electrode ;
+    lbco:has_ID "CEL-26-200" ;
+    lbco:has_property "ex:PROPERTY_3_402",
+        "ex:PROPERTY_4_402" .
+
+ex:IFPEN_LIB_ELO_26_400 a lbco:positive_electrode ;
+    lbco:has_property ex:PROPERTY_1_400,
+        ex:PROPERTY_2_400 .
+
+ex:PROPERTY_1_399 a lbco:electrode_porosity ;
+    rdfs:comment "Value and unit: 40 %" ;
+    dqv:hasQualityMeasurement [ a dqv:QualityMeasurement ;
+            dqv:isMeasurementOf "ex:ratio" ;
+            dqv:value 4e-01 ] .
+
+ex:PROPERTY_1_401 a lbco:electrode_porosity ;
+    rdfs:comment "Value and unit: 40 %" ;
+    dqv:hasQualityMeasurement [ a dqv:QualityMeasurement ;
+            dqv:isMeasurementOf "ex:ratio" ;
+            dqv:value 4.1e-01 ] .
+
+ex:PROPERTY_1_402 a lbco:electrode_porosity ;
+    rdfs:comment "Value and unit: 40 %" ;
+    dqv:hasQualityMeasurement [ a dqv:QualityMeasurement ;
+            dqv:isMeasurementOf "ex:ratio" ;
+            dqv:value 4.1e-01 ] .
+
+ex:PROPERTY_2_399 a lbco:electrode_surface_area ;
+    rdfs:comment "Value and unit: 1.131 cm^2" ;
+    dqv:hasQualityMeasurement [ a dqv:QualityMeasurement ;
+            sdmxa:unitMeasure <http://qudt.org/vocab/unit/CentiM2> ;
+            dqv:isMeasurementOf "ex:surface_area" ;
+            dqv:value 1.131e+00 ] .
+
+ex:PROPERTY_2_401 a lbco:electrode_surface_area ;
+    rdfs:comment "Value and unit: 1.131 cm^2" ;
+    dqv:hasQualityMeasurement [ a dqv:QualityMeasurement ;
+            sdmxa:unitMeasure <http://qudt.org/vocab/unit/CentiM2> ;
+            dqv:isMeasurementOf "ex:surface_area" ;
+            dqv:value 1.131e+00 ] .
+
+ex:PROPERTY_2_402 a lbco:electrode_surface_area ;
+    rdfs:comment "Value and unit: 1.131 cm^2" ;
+    dqv:hasQualityMeasurement [ a dqv:QualityMeasurement ;
+            sdmxa:unitMeasure <http://qudt.org/vocab/unit/CentiM2> ;
+            dqv:isMeasurementOf "ex:surface_area" ;
+            dqv:value 1.131e+00 ] .
+
+ex:SETTING_1_399 a lbco:number_of_spacers ;
+    rdfs:comment "Value and unit: 3 units" ;
+    dqv:hasQualityMeasurement [ a dqv:QualityMeasurement ;
+            dqv:isMeasurementOf "ex:count" ;
+            dqv:value 3 ] .
+
+ex:SETTING_1_400 a lbco:number_of_spacers ;
+    rdfs:comment "Value and unit: 3 units" ;
+    dqv:hasQualityMeasurement [ a dqv:QualityMeasurement ;
+            dqv:isMeasurementOf "ex:count" ;
+            dqv:value 3 ] .
+
+ex:SETTING_1_401 a lbco:number_of_spacers ;
+    rdfs:comment "Value and unit: 3 units" ;
+    dqv:hasQualityMeasurement [ a dqv:QualityMeasurement ;
+            dqv:isMeasurementOf "ex:count" ;
+            dqv:value 3 ] .
+
+ex:SETTING_1_402 a lbco:number_of_spacers ;
+    rdfs:comment "Value and unit: 3 units" ;
+    dqv:hasQualityMeasurement [ a dqv:QualityMeasurement ;
+            dqv:isMeasurementOf "ex:count" ;
+            dqv:value 3 ] .
+
+ex:IFPEN_LIB_AGT_25_1312 a lbco:separator ;
+    rdfs:comment "three-layer PP/PE/PP structure" ;
+    lbco:has_property "ex:PROPERTY_5_399",
+        "ex:PROPERTY_5_401",
+        "ex:PROPERTY_6_399",
+        "ex:PROPERTY_6_401" .
+
+ex:PROPERTY_1_400 a lbco:electrode_porosity ;
+    rdfs:comment "Value and unit: 40 %" ;
+    dqv:hasQualityMeasurement [ a dqv:QualityMeasurement ;
+            dqv:isMeasurementOf "ex:ratio" ;
+            dqv:value 4e-01 ] .
+
+ex:PROPERTY_2_400 a lbco:electrode_surface_area ;
+    rdfs:comment "Value and unit: 1.131 cm^2" ;
+    dqv:hasQualityMeasurement [ a dqv:QualityMeasurement ;
+            sdmxa:unitMeasure <http://qudt.org/vocab/unit/CentiM2> ;
+            dqv:isMeasurementOf "ex:surface_area" ;
+            dqv:value 1.131e+00 ] .
+
+ex:HUMAN_1 a lbco:human_agent ;
+    lbco:has_ID "girodn" .
+
+ex:IFPEN_LIB_CEL_26_399 a lbco:full_cell,
+        lbco:negative_electrode ;
+    lbco:has_ID "CEL-26-399" ;
+    lbco:has_property "ex:PROPERTY_C1_399",
+        "ex:PROPERTY_C2_399",
+        "ex:PROPERTY_C3_399" .
+
+ex:IFPEN_LIB_CEL_26_400 a lbco:full_cell,
+        lbco:negative_electrode ;
+    lbco:has_ID "CEL-26-400" ;
+    lbco:has_property "ex:PROPERTY_C1_400",
+        "ex:PROPERTY_C2_400",
+        "ex:PROPERTY_C3_400" .
+
+ex:IFPEN_LIB_CEL_26_401 a lbco:full_cell,
+        lbco:negative_electrode ;
+    lbco:has_ID "CEL-26-401" ;
+    lbco:has_property "ex:PROPERTY_C1_401",
+        "ex:PROPERTY_C2_401",
+        "ex:PROPERTY_C3_401" .
+
+ex:IFPEN_LIB_CEL_26_402 a lbco:full_cell,
+        lbco:negative_electrode ;
+    lbco:has_ID "CEL-26-402" ;
+    lbco:has_property "ex:PROPERTY_C1_402",
+        "ex:PROPERTY_C2_402",
+        "ex:PROPERTY_C3_402" .
+
+ex:IFPEN_LIB_PRC_25_321 a lbco:electrolyte,
+        lbco:negative_electrode .
