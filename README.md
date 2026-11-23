@@ -31,4 +31,6 @@ The "@context" of JSON-LD may have provisions to convert plain identifiers into 
 
 * ./zenodo/D1.3_Repository/a4d5558c-cd40-4197-aa29-58643ba5c1e2.jsonld
 
+Note: creators and contributors are sets so *unordered* by default.
+
 WIP!
